@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, NavLink as MenuLink, Link as A } from 'theme-ui';
-import NextLink from 'next/link';
+import { jsx, NavLink as MenuLink, Link as A } from "theme-ui";
+import NextLink from "next/link";
 export function NavLink({ path, label, children, ...rest }) {
   return (
     <NextLink href={path}>
@@ -11,7 +11,9 @@ export function NavLink({ path, label, children, ...rest }) {
 export function Link({ path, label, children, ...rest }) {
   return (
     <NextLink href={path}>
-      <A {...rest}>{children ? children : label}</A>
+      <a href={path} {...rest}>
+        {children ? children : label}
+      </a>
     </NextLink>
   );
 }

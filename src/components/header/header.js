@@ -6,7 +6,7 @@ import Logo from "components/logo";
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobileDrawer";
 import menuItems from "./header.data";
-import logoDark from "assets/panache-small.png";
+import logoDark from "assets/panache.png";
 
 export default function Header({ className }) {
   return (
@@ -62,22 +62,24 @@ const styles = {
     "&:hover": {
       color: "#fff",
     },
+    textDecoration: "none",
   },
   header: {
     color: "text_white",
     fontWeight: "normal",
-    py: "25px",
+    py: "5px",
     width: "100%",
     position: "fixed",
     top: 0,
     left: 0,
-    backgroundColor: "transparent",
+    // backgroundColor: "#001233",
+    backgroundColor: "#000",
     transition: "all 0.4s ease",
 
     "&.sticky": {
-      backgroundColor: "background",
-      color: "text",
-      py: "15px",
+      backgroundColor: "#000",
+      color: "white",
+      py: "3px",
       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
     },
   },
@@ -96,7 +98,8 @@ const styles = {
     },
     navLink: {
       fontSize: "16px",
-      color: "#02073E",
+      // color: "#02073E",
+      color: "white",
       fontWeight: "400",
       cursor: "pointer",
       lineHeight: "1.2",

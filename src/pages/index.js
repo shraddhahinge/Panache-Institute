@@ -14,6 +14,7 @@ import Testimonials from "sections/testimonials";
 import Blogs from "sections/blogs";
 import FAQ from "sections/faq";
 import Subscribe from "sections/subscribe";
+import Features from "sections/features";
 
 export default function IndexPage() {
   return (
@@ -22,13 +23,14 @@ export default function IndexPage() {
         <Layout>
           <SEO title="Panache Institute" />
           <Banner />
+          <Features />
           <Services />
           <Jackpot />
           <CallToAction />
           {/* <Featured /> */}
           {/* <Pricing /> */}
           <Testimonials />
-          <Blogs />
+          {/* <Blogs /> */}
           <FAQ />
           <Subscribe />
         </Layout>

@@ -1,8 +1,13 @@
 import React from "react";
 import { Box, Container, Image, Heading, Text } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import logoImage from "assets/panache-full.png";
+import logoImage from "assets/panache-1.jpg";
 import bannerImage from "assets/banner-mockup.png";
+import bannerMainImage from "assets/banner.jpeg";
+import bannerSide1 from "assets/bannerSideImage_1.png";
+import bannerSide2 from "assets/bannerSideImage_2.jpeg";
+import bannerSide3 from "assets/bannerSideImage_3.jpg";
+import bannerSide4 from "assets/bannerSideImage_4.jpeg";
 import bannerIcon1 from "assets/banner-icon-1-1.svg";
 import bannerIcon2 from "assets/banner-icon-1-2.svg";
 import bannerIcon3 from "assets/banner-icon-1-3.svg";
@@ -57,23 +62,48 @@ const Banner = () => {
           alt="banner icon"
           src={bannerIcon7}
         />
-
-        <Image sx={styles.logo} src={logoImage} alt="logo image" />
-        <Text as="p">
-          <Text as="span">PANACHE</Text> is one of the institute where the team
-          of passionate teachers do more than just teaching English. We evolve
-          strong students who are confident and prepared to take on the
-          challenges in our fast growing world. Fluency in English is the key to
-          opening the door to your academic and professional dreams, and Panache
-          Institute is here to help you achieve that dream.
-        </Text>
+        {/* feature images */}
         <Image
-          src={
-            "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-          }
-          sx={styles.bannerImage}
-          alt="banner moc"
+          sx={styles.bannerSide1}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerSide1}
         />
+        <Image
+          sx={styles.bannerSide2}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerSide2}
+        />
+        <Image
+          sx={styles.bannerSide3}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerSide3}
+        />
+        <Image
+          sx={styles.bannerSide4}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerSide4}
+        />
+        {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */}
+        <Box sx={styles.para}>
+          <Heading as="h3">
+            Institute where{" "}
+            <Text as="span">The Team Of Passionate Teachers</Text> do more than
+            just Teaching English
+          </Heading>
+          <Text as="p">
+            {/* <Text as="span">PANACHE</Text> is one of the institute where the team
+          of passionate teachers do more than just teaching English.  */}
+            We evolve strong students who are confident and prepared to take on
+            the challenges in our fast growing world. Fluency in English is the
+            key to opening the door to your academic and professional dreams,
+            and Panache Institute is here to help you achieve that dream.
+          </Text>
+        </Box>
+        <Image src={bannerMainImage} sx={styles.bannerImage} alt="banner moc" />
       </Container>
     </Box>
   );
@@ -146,17 +176,29 @@ const styles = {
     backgroundColor: "#F9FBFD",
     textAlign: "center",
     pt: ["110px", null, null, null, "100px"],
-
+    pb: 10,
+    h3: {
+      fontSize: ["25px", null, null, null, "40px"],
+      width: ["90%", null, null, null, "50%"],
+      mx: "auto",
+      textAlign: "center",
+      lineHeight: 1.4,
+      fontWeight: "bold",
+      span: {
+        color: "#edab12",
+      },
+    },
     p: {
-      // fontSize: ["20px", null, null, "22px", "28px", "28px", "25px"],
-      fontSize: "25px",
+      fontSize: ["20px", null, null, "20px", "20px", "20px", "20px"],
+      // fontSize: "18px",
       lineHeight: 1.25,
       color: "#02073E",
       fontWeight: 500,
-      width: "100%",
+      width: ["90%", null, null, null, "50%"],
+      // textAlign: "justify",
       maxWidth: ["100%", null, null, "55%", "500px", "940px", "980px"],
       mx: "auto",
-      mt: "30px",
+      mt: "10px",
       mb: ["40px", null, null, "65px"],
       span: {
         color: "#edab12",
@@ -164,17 +206,22 @@ const styles = {
       },
     },
   },
+  para: {
+    mt: "30px",
+  },
   logo: {
     display: "block",
-    borderRadius: "50%",
+    borderRadius: "10px",
     mx: "auto",
     boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.12)",
-    width: 200,
-    height: 200,
+    width: 450,
+    height: 300,
+    // objectFit: "contain",
   },
   bannerImage: {
     display: "block",
     mx: "auto",
+    borderRadius: "10px",
     position: "relative",
     maxWidth: ["100%", null, null, "80%", null, "60%"],
   },
@@ -185,6 +232,34 @@ const styles = {
       display: ["none", null, null, null, "block"],
       // display: [null, null, null, "block"],
     },
+  },
+  bannerSide1: {
+    width: 220,
+    height: 220,
+    objectFit: "contain",
+    top: "30%",
+    left: "0px",
+  },
+  bannerSide2: {
+    width: 220,
+    height: 220,
+    objectFit: "contain",
+    bottom: "5%",
+    left: "0px",
+  },
+  bannerSide3: {
+    width: 220,
+    height: 220,
+    objectFit: "contain",
+    top: "30%",
+    right: "0px",
+  },
+  bannerSide4: {
+    width: 220,
+    height: 220,
+    objectFit: "contain",
+    bottom: "5%",
+    right: "0px",
   },
   bannerIcon1: {
     top: "10%",

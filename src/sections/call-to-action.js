@@ -21,8 +21,12 @@ const CallToAction = () => {
               guidelines ever. Get your tests delivered at let home collect
               sample.
             </Text>
-            <Link path="#" sx={styles.button}>
-              Explore More
+            <Link
+              path="https://forms.gle/2sG6pC6zy9X61Dat7/"
+              target="_blank"
+              sx={styles.button}
+            >
+              Enroll Now
             </Link>
           </Box>
           <Box sx={styles.images}>
@@ -89,6 +93,7 @@ const styles = {
     "&:hover": {
       opacity: 0.8,
     },
+    textDecoration: "none",
   },
   images: {
     flex: ["0 0 100%", null, null, null, "0 0 61.5%"],
