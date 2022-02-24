@@ -29,7 +29,7 @@ const Jackpot = () => {
           <Box sx={styles.content}>
             <Box sx={styles.heading}>
               <Text as="span">Our Resources</Text>
-              <Heading as="h3">
+              <Heading as="h4">
                 Online English classes for kids 4-12 years old
               </Heading>
             </Box>
@@ -84,7 +84,7 @@ const styles = {
       lineHeight: 1,
       mb: "20px",
     },
-    h3: {
+    h4: {
       color: "#0F2137",
       fontSize: ["23px", null, null, null, "30px", "36px", "44px"],
       maxWidth: ["100%", null, null, null, null, "90%", "100%"],

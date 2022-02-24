@@ -3,24 +3,45 @@ import { Box, Container, Flex, Text, Heading, Image } from "theme-ui";
 import { Link } from "components/link";
 
 import callImage from "assets/onlineTeaching.jpeg";
-
+import JackpotCard from "components/cards/jackpot-card";
+import jackpotImage1 from "assets/jackpot-1-1.png";
+import jackpotImage2 from "assets/jackpot-1-2.png";
 const CallToAction = () => {
+  const JACKPOT_DATA = [
+    {
+      image: jackpotImage1,
+      text: "We teach regardless of your age and help you, do away with all the obstacles on your way to success.",
+      heading: "Passion to Profession",
+    },
+    {
+      image: jackpotImage2,
+      text: "Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests.",
+      heading: "Engaging program for kids",
+    },
+  ];
   return (
     <Box as="section" sx={styles.callToAction}>
       <Container>
         <Flex sx={styles.flex}>
           <Box sx={styles.content}>
-            <Text as="span">Our good mission</Text>
-            <Heading as="h3">
-              “Our mission is to serve low income families with free online
-              educational services.“
-            </Heading>
-            <Text as="p">
+            {/* <Text as="span">Our good mission</Text> */}
+            <Heading as="h4">“Mission and Vision“</Heading>
+            <Box sx={styles.jackpotCardBox}>
+              {JACKPOT_DATA.map(({ image, heading, text }, index) => (
+                <JackpotCard
+                  image={image}
+                  heading={heading}
+                  text={text}
+                  key={index}
+                />
+              ))}
+            </Box>
+            {/* <Text as="p">
               Get your tests delivered at let home collect sample from the
               victory of the managements that supplies best design system
               guidelines ever. Get your tests delivered at let home collect
               sample.
-            </Text>
+            </Text> */}
             <Link
               path="https://forms.gle/2sG6pC6zy9X61Dat7/"
               target="_blank"
@@ -62,7 +83,7 @@ const styles = {
       display: "block",
       lineHeight: 1,
     },
-    h3: {
+    h4: {
       color: "#0F2137",
       fontWeight: 700,
       fontSize: ["23px", null, null, null, "30px", "36px", "44px"],
@@ -74,7 +95,7 @@ const styles = {
     },
     p: {
       color: "#02073E",
-      fontSize: ["16px", null, null, "18px"],
+      // fontSize: ["16px", null, null, "18px"],
       lineHeight: ["2", null, null, 2.33],
       mb: "30px",
     },
@@ -97,5 +118,9 @@ const styles = {
   },
   images: {
     flex: ["0 0 100%", null, null, null, "0 0 61.5%"],
+  },
+  jackpotCardBox: {
+    display: ["grid", null, null, null, null, "block"],
+    gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
   },
 };

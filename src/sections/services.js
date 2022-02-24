@@ -3,7 +3,7 @@ import { Box, Container, Grid } from "theme-ui";
 import BlockTitle from "components/block-title";
 import ServiceCard from "components/cards/service-card";
 import course1 from "assets/course1.png";
-import course2 from "assets/course2.png";
+import course2 from "assets/course2.jpeg";
 import course3 from "assets/course3.png";
 import course4 from "assets/course4.png";
 import serviceImage5 from "assets/service-5.png";
@@ -28,7 +28,7 @@ const SERVICES_DATA = [
     width: 600,
 
     text: "In this course we equip the students with our ancient calculation tricks which are helpful  to score better not just in schools but also in competitive exams anywhere.",
-    heading: "Vedic ready",
+    heading: "The Magic of Vedic Maths",
     path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
   },
   {
@@ -55,8 +55,8 @@ const Services = () => {
     <Box as="section" id="courses" sx={styles.services}>
       <Container>
         <BlockTitle
-          title="Discover our courses here"
-          text="Courses we provide"
+          title="Our courses"
+          // text="Courses we provide"
         />
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map(({ image, text, heading, path, width }, index) => (
@@ -79,12 +79,12 @@ export default Services;
 
 const styles = {
   services: {
-    pt: ["80px", null, null, null, "80px", null, "100px"],
+    mt: ["60px", null, null, null, "150px", null, "100px"],
   },
   grid: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
+    // display: "flex",
+    // flexWrap: "wrap",
+    // justifyContent: "center",
     // gridGap: "30px",
     // gridTemplateColumns: ["1fr", null, null, "1fr 1fr", null, "1fr 1fr"],
   },

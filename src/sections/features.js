@@ -17,19 +17,21 @@ const featuresData = [
   {
     id: 2,
     title: "Classes from home",
-    text: "Parents save time and money they'd otherwise be spend on travelling to offline classes. Kids study in the comfortable home environment without the worry of catching any flu.",
+    // text: "Parents save time and money they'd otherwise be spend on travelling to offline classes. Kids study in the comfortable home environment without the worry of catching any flu.",
+    text: "We provide the new normal i.e online classes which are safe and cost effective too.",
     image: Image2,
   },
   {
     id: 3,
     title: "Age appropriate",
-    text: "The program is focused on building the skills required today. Also, the batches are formed on the basis of age of students.",
+    // text: "The program is focused on building the skills required today. Also, the batches are formed on the basis of age of students.",
+    text: "Peer groups are formed as per age and previous knowledge would be judged through a quick test.",
     image: Image3,
   },
   {
     id: 4,
-    title: "",
-    text: "",
+    title: "Personal Mentoring",
+    text: "Personal mentors, with whom you can interact via text messages to get hands-on experience over the course and can clear your doubts easily.",
     image: Image4,
   },
 ];
@@ -37,12 +39,12 @@ const Features = () => {
   return (
     <Box sx={styles.features}>
       {/* as="section" id="courses" */}
-      <Container>
+      <Container sx={styles.container}>
         <BlockTitle
           // title="Discover our courses here"
-          title="Features we provide"
+          title="Quality Features"
         />
-        <Grid>
+        <Grid sx={styles.grid}>
           {featuresData.map(({ id, title, text, image }, index) => (
             <FeatureCard key={id} title={title} text={text} image={image} />
           ))}
@@ -56,7 +58,14 @@ export default Features;
 
 const styles = {
   features: {
-    display: ["block", "block", "none", "none"],
+    // display: ["block", "block", "none", "none"],
     mt: "20px",
+    padding: "0px",
+  },
+  grid: {
+    display: "flex",
+    flexDirection: ["column", null, null, "row"],
+    alignItems: "center",
+    justifyContent: "space-between",
   },
 };

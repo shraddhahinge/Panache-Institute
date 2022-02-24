@@ -25,14 +25,15 @@ export default FeatureCard;
 
 const styles = {
   featureCard: {
-    // width: "550px",
+    width: [null, null, null, "550px"],
+    height: [null, null, null, "300px"],
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     // justifyContent: "space-between",
     // border: "1px solid black",
-    boxShadow: "0px 0px 15px -5px",
-    backgroundColor: "#FDF8E1",
+    // boxShadow: "0px 0px 15px -5px",
+    // backgroundColor: "#FDF8E1",
     padding: "10px",
     // margin: "10px",
   },
@@ -42,8 +43,8 @@ const styles = {
     // height: 300,
     // border: "1px solid black",
     img: {
-      width: 100,
-      height: 100,
+      width: 200,
+      height: 200,
       objectFit: "contain",
     },
   },
@@ -71,6 +72,8 @@ const styles = {
       mt: "10px",
       // mb: "20px",
       textAlign: "center",
+      width: "80%",
+      mx: "auto",
     },
   },
   button: {
