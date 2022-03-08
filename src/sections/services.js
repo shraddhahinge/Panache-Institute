@@ -4,8 +4,12 @@ import BlockTitle from "components/block-title";
 import ServiceCard from "components/cards/service-card";
 import course1 from "assets/course1.png";
 import course2 from "assets/course2.jpeg";
-import course3 from "assets/course3.png";
+import course3 from "assets/course3.jpeg";
 import course4 from "assets/course4.png";
+import course5 from "assets/course5.png";
+import course6 from "assets/course6.jpeg";
+import course7 from "assets/course7.jpeg";
+import course8 from "assets/course8.jpeg";
 import serviceImage5 from "assets/service-5.png";
 import serviceImage6 from "assets/service-6.png";
 
@@ -13,7 +17,7 @@ const SERVICES_DATA = [
   {
     image: course1,
     text: "This  public speaking course will help you become a more confident public speaker. In this course you will get in-depth information on developing an engaging program and delivering your presentation with power. You will learn how to identify your audience, create a basic outline of your speech, and organize your program in a way that makes the most sense. You will also learn how to overcome your nervousness, and a whole lot more!",
-    heading: "Eloquent speaker",
+    heading: "Eloquent Writers & Speakers",
     path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
   },
   {
@@ -34,21 +38,33 @@ const SERVICES_DATA = [
   {
     image: course4,
     text: "More important than what you say is 'how' you say it. In this course we pursue a holistic approach to vocal training by incorporating exercises of voice modulation and intonation. Classes are real fun when students portray different characters of legendary  Shakespeare’s plays and other similar genre.",
-    heading: "Performer",
+    heading: "Performers",
     path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
   },
-  // {
-  //   image: serviceImage5,
-  //   text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-  //   heading: "Ultimate development",
-  //   path: "#",
-  // },
-  // {
-  //   image: serviceImage6,
-  //   text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-  //   heading: "Online support",
-  //   path: "#",
-  // },
+  {
+    image: course5,
+    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    heading: "Passionate Readers",
+    path: "#",
+  },
+  {
+    image: course6,
+    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    heading: "English Vinglish",
+    path: "#",
+  },
+  {
+    image: course7,
+    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    heading: "Phonic Masters",
+    path: "#",
+  },
+  {
+    image: course8,
+    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    heading: "Informed Panachians",
+    path: "#",
+  },
 ];
 const Services = () => {
   return (
@@ -82,10 +98,17 @@ const styles = {
     mt: ["60px", null, null, null, "150px", null, "100px"],
   },
   grid: {
-    // display: "flex",
-    // flexWrap: "wrap",
-    // justifyContent: "center",
-    // gridGap: "30px",
-    // gridTemplateColumns: ["1fr", null, null, "1fr 1fr", null, "1fr 1fr"],
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
+    gridGap: "30px",
+    gridTemplateColumns: [
+      "1fr",
+      "1fr 1fr",
+      "1fr 1fr",
+      "1fr 1fr",
+      "1fr 1fr 1fr",
+      "1fr 1fr 1fr 1fr",
+    ],
   },
 };

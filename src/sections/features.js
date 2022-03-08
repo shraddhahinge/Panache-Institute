@@ -3,14 +3,14 @@ import { Box, Container, Image, Heading, Text, Grid } from "theme-ui";
 import Image1 from "assets/bannerSideImage_1.png";
 import Image2 from "assets/bannerSideImage_2.jpeg";
 import Image3 from "assets/bannerSideImage_3.jpg";
-import Image4 from "assets/bannerSideImage_4.jpeg";
+import Image4 from "assets/bannerSideImage-4.png";
 import BlockTitle from "components/block-title";
 import FeatureCard from "components/cards/feature-card";
 
 const featuresData = [
   {
     id: 1,
-    title: "Experienced Teachers",
+    title: "Experiencxed Teachers",
     text: "All our teachers have teaching experience of about a decade and are well-versed with online teaching too.",
     image: Image1,
   },
@@ -40,10 +40,10 @@ const Features = () => {
     <Box sx={styles.features}>
       {/* as="section" id="courses" */}
       <Container sx={styles.container}>
-        <BlockTitle
+        {/* <BlockTitle
           // title="Discover our courses here"
           title="Quality Features"
-        />
+        /> */}
         <Grid sx={styles.grid}>
           {featuresData.map(({ id, title, text, image }, index) => (
             <FeatureCard key={id} title={title} text={text} image={image} />
@@ -59,7 +59,8 @@ export default Features;
 const styles = {
   features: {
     // display: ["block", "block", "none", "none"],
-    mt: "20px",
+    mt: 100,
+    mb: 250,
     padding: "0px",
   },
   grid: {

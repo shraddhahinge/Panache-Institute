@@ -43,8 +43,8 @@ const styles = {
     // height: 300,
     // border: "1px solid black",
     img: {
-      width: 200,
-      height: 200,
+      width: 250,
+      height: 250,
       objectFit: "contain",
     },
   },

@@ -187,8 +187,6 @@ import Avatar1 from "assets/testimonial-1-1.png";
 import Avatar2 from "assets/testimonial-1-2.png";
 import Avatar3 from "assets/testimonial-1-3.png";
 import Avatar4 from "assets/testimonial-1-4.png";
-import StudentFeedback1 from "assets/studentFeedback_1.jpg";
-import StudentFeedback2 from "assets/studentFeedback_2.jpg";
 
 const data = [
   {
@@ -197,7 +195,7 @@ const data = [
     description:
       "Thankyou ma'am for teaching us good things. The normal study is to manage life but this study is useful for life time.",
     avatar: Avatar1,
-    image: StudentFeedback1,
+    // image: StudentFeedback1,
     name: "Om",
     designation: "Grade-1 student",
     review: 4,
@@ -208,7 +206,7 @@ const data = [
     description:
       "Thank you ma'am for always motivating. Learning from you was a great experience. You taught with great patience and enthusiastically. Before learning from you neither I was able to express my views nor speak up frequently and fluently. But you really transformed me. You made me confident about myself and always encouraged me to do more. Your sessions were very interactive. And the thing I like the most about the course is Group discussions. Thank you ma'am for providing great knowledge to me.",
     avatar: Avatar2,
-    image: StudentFeedback2,
+    // image: StudentFeedback2,
     name: "Anshika",
     designation: "Grade-12 student",
     review: 5,
@@ -219,7 +217,7 @@ const data = [
     description:
       "Neha ma'am is my favourite because she has some special qualities e.g cute, good, honest, clean heart and one important thing soft voice. She is very sweet and amazing!!! I love my Neha ma'am very much.",
     avatar: Avatar3,
-    image: StudentFeedback1,
+    // image: StudentFeedback1,
     name: "Arisha Rana",
     designation: "Grade-4 student",
     review: 5,

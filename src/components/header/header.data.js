@@ -1,22 +1,22 @@
 export default [
   {
     path: "banner",
-    label: "Home",
+    label: "About Us",
   },
   {
     path: "courses",
-    label: "Our Courses",
+    label: "Courses",
+  },
+  {
+    // path: "pricing",
+    label: "Enroll Now",
+  },
+  {
+    // path: "testimonials",
+    label: "Events",
   },
   // {
-  //   path: "pricing",
-  //   label: "Pricing",
+  //   path: "news",
+  //   label: "News",
   // },
-  {
-    path: "testimonials",
-    label: "Testimonials",
-  },
-  {
-    path: "news",
-    label: "News",
-  },
 ];

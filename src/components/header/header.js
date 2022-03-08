@@ -8,39 +8,41 @@ import MobileDrawer from "./mobileDrawer";
 import menuItems from "./header.data";
 import logoDark from "assets/panache.png";
 
-export default function Header({ className }) {
+export default function Header({ className, isCoursePage }) {
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className}>
         <Container sx={styles.container}>
-          <Logo image={logoDark} />
+          <Logo image={logoDark} className={className} />
 
-          <Flex as="nav" sx={styles.nav}>
-            {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                sx={styles.nav.navLink}
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
-              >
-                {label}
-              </ScrollLink>
-            ))}
-          </Flex>
+          {!isCoursePage && (
+            <Flex as="nav" sx={styles.nav}>
+              {menuItems.map(({ path, label }, i) => (
+                <ScrollLink
+                  activeClass="active"
+                  sx={styles.nav.navLink}
+                  to={path}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  key={i}
+                >
+                  {label}
+                </ScrollLink>
+              ))}
+            </Flex>
+          )}
 
           <Link
             path="/"
             ml={2}
-            label="Contact Us"
+            label={isCoursePage ? "Home" : "Contact Us"}
             sx={styles.headerBtn}
             variant="buttons.primary"
           />
 
-          <MobileDrawer />
+          {!isCoursePage && <MobileDrawer />}
         </Container>
       </header>
     </DrawerProvider>
@@ -56,7 +58,9 @@ const styles = {
     borderRadius: "5px",
     color: "#ffffff",
     padding: "6.5px 24px",
+
     display: ["none", null, null, null, "inline-block"],
+
     ml: ["0", null, null, "auto", "0"],
     mr: ["0", null, null, "20px", "0"],
     "&:hover": {
@@ -65,7 +69,7 @@ const styles = {
     textDecoration: "none",
   },
   header: {
-    color: "text_white",
+    color: "#000",
     fontWeight: "normal",
     py: "5px",
     width: "100%",
@@ -73,23 +77,25 @@ const styles = {
     top: 0,
     left: 0,
     // backgroundColor: "#001233",
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     transition: "all 0.4s ease",
 
     "&.sticky": {
-      backgroundColor: "#000",
-      color: "white",
+      backgroundColor: "#fff",
+      color: "#000",
       py: "3px",
       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
+      transition: "500ms",
+      transition: "all 0.4s ease",
     },
   },
   container: {
     display: "flex",
     alignItems: "center",
-    width: [null, null, null, null, null, null, "1390px"],
-    "@media screen and (max-width: 960px)": {
-      justifyContent: "space-between",
-    },
+    width: "100%",
+    // width: [null, null, null, null, null, null, "1390px"],
+    justifyContent: "space-between",
+    "@media screen and (max-width: 960px)": {},
   },
   nav: {
     mx: "auto",
@@ -99,7 +105,7 @@ const styles = {
     navLink: {
       fontSize: "16px",
       // color: "#02073E",
-      color: "white",
+      color: "#000",
       fontWeight: "400",
       cursor: "pointer",
       lineHeight: "1.2",
