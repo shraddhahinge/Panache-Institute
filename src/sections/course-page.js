@@ -178,7 +178,7 @@ const CoursePage = () => {
               }}
             >
               <Image src={rupee} sx={{ width: 60, height: 60 }} />
-              <Text sx={{ fontSize: "50px" }}>{"2000 "}</Text>
+              <Text sx={{ fontSize: "50px" }}>{price}</Text>
               <Text>/month</Text>
             </Box>
             <Link
