@@ -334,11 +334,13 @@ export default function TestimonialCard() {
                 {item.title}
               </Heading>
               {/* <Image src={item.image} sx={styles.feedbackImg} /> */}
-              {item.description.length > 150 ? (
-                readMorePara(item.description)
-              ) : (
-                <Text sx={styles.description}>{item.description}</Text>
-              )}
+              <Text sx={styles.description}>
+                {item.description.length > 150 ? (
+                  readMorePara(item.description)
+                ) : (
+                  <Text>{item.description}</Text>
+                )}
+              </Text>
 
               <div className="card-footer">
                 <div className="image">
@@ -469,22 +471,31 @@ const styles = {
     lineHeight: 1.6,
   },
   description: {
-    fontSize: [1, null, null, 2],
+    // fontSize: [1, null, null, 2],
+    fontSize: "20px",
+    color: "#343D48",
+    lineHeight: 1.73,
     fontWeight: "normal",
-    color: "text",
-    lineHeight: [1.85, null, 2],
+    // color: "text",
+    // lineHeight: [1.85, null, 2],
   },
   heading: {
-    fontSize: [1, null, null, 2],
+    // fontSize: [1, null, null, 2],
+    fontSize: "22px",
+    color: "#343D48",
+    lineHeight: 1.73,
     fontWeight: 700,
     mb: "3px",
-    color: "text",
-    lineHeight: 1.3,
+    // color: "text",
+    // lineHeight: 1.3,
   },
   designation: {
     color: "#25A0FF",
     fontWeight: "500",
-    fontSize: 1,
-    lineHeight: 1.4,
+    // fontSize: 1,
+    // lineHeight: 1.4,
+    fontSize: "18px",
+    // color: "#343D48",
+    lineHeight: 1.73,
   },
 };

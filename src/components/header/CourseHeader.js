@@ -13,7 +13,7 @@ export default function CourseHeader() {
   return (
     <header sx={styles.header}>
       <Container sx={styles.container}>
-        <a href="/">
+        <a href="/#courses">
           <Image src={backArrow} sx={{ width: 50, height: 50 }} />
         </a>
         <Image

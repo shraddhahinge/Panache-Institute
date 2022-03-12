@@ -4,7 +4,8 @@ import { Link } from "components/link";
 import arrowAngle from "assets/arrow-angle.svg";
 
 const ServiceCard = (props) => {
-  const { image, text, heading, path, sessions, period, price } = props;
+  const { image, text, heading, path, sessions, period, price, tagline } =
+    props;
   return (
     <Link
       path="/course"
@@ -22,7 +23,7 @@ const ServiceCard = (props) => {
       </Box>
       <Box sx={styles.content}>
         <Heading as="h3">{heading}</Heading>
-        {/* <Text as="p">{text}</Text> */}
+        <Text as="p">{tagline}</Text>
       </Box>
       {/* </Box> */}
       {/* <Box sx={styles.button}>
@@ -106,7 +107,7 @@ const styles = {
     p: {
       fontSize: "16px",
       lineHeight: 1.87,
-      color: "#343D48",
+      color: "#00b4d8",
       // mt: "20px",
       // mb: "20px",
     },

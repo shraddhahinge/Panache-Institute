@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Image, Heading, Text } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import bannerMainImage from "assets/banner.jpeg";
+
 import banner1 from "assets/banner-1.png";
 import banner2 from "assets/banner-2.jpeg";
 import banner3 from "assets/banner3.webp";
@@ -13,7 +13,7 @@ import bannerIcon5 from "assets/banner-icon-1-5.svg";
 import bannerIcon6 from "assets/banner-icon-1-6.svg";
 import bannerIcon7 from "assets/dot-pattern.svg";
 import checkMark from "assets/check-mark.svg";
-import { Link } from "components/link";
+
 import Carousel from "react-multi-carousel";
 const responsive = {
   desktop: {
@@ -48,7 +48,7 @@ const BANNER_DATA = [
       "Improving pronunciation.",
       "Basic lessons of grammar.",
       "Command over reading.",
-      "Game based lessons and assessments.",
+      "Game based assessments.",
     ],
   },
   {
@@ -127,7 +127,7 @@ const Banner = () => {
     );
   };
   return (
-    <Box sx={styles.carouselWrapper}>
+    <Box sx={styles.main}>
       <Carousel
         additionalTransfrom={0}
         arrows={false}
@@ -156,7 +156,6 @@ const Banner = () => {
           <Box as="section" id="banner" sx={styles.banner}>
             {backgroundImagesAnimation()}
             <Container sx={styles.container}>
-              {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */}
               <Box sx={styles.listContainer}>
                 {data?.list.map((l) => (
                   <Box sx={styles.paraContainer}>
@@ -242,28 +241,10 @@ const bannerAnim3 = keyframes`
 `;
 
 const styles = {
-  carouselWrapper: {
-    // display: "flex",
-    // justifyContent: "flex-end",
-    // // flexDirection: "column",
-    // alignItems: "flex-end",
-    // mt: "-35px",
-    // px: "15px",
-    // zIndex: 1,
+  main: {
     ".carousel-container": {
       width: "100%",
-      // maxWidth: [
-      //   "100%",
-      //   null,
-      //   null,
-      //   "750px",
-      //   "1000px",
-      //   "1180px",
-      //   null,
-      //   "calc(50% + 865px)",
-      // ],
-      // mr: ["auto", null, null, null, null, null, null, "-220px"],
-      // ml: "auto",
+
       mx: "auto",
       ".react-multi-carousel-item": {
         transition: "all 0.25s",
@@ -278,24 +259,14 @@ const styles = {
   },
   banner: {
     overflow: "hidden",
-    // backgroundImage: `url(${backgroundImage})`,
-
-    // height: [760, null, null, 700] /* You must set a specified height */,
     height: "100vh",
-    // backgroundPosition: "center" /* Center the image */,
-    // backgroundRepeat: "no-repeat" /* Do not repeat the image */,
-    // backgroundSize: "cover",
-    // backgroundColor: "#F9FBFD",
-    // backgroundColor: "#eaf9ff", //"#CAF0F8",
-    // textAlign: "center",
     pt: ["180px", null, null, null, "100px"],
     pb: 10,
     ".bannerIcon": {
       position: "absolute",
       display: ["none", null, null, null, "block"],
-      // display: [null, null, null, "block"],
     },
-    // height: 700,
+
     h3: {
       fontSize: ["35px", null, null, null, "60px"],
       width: ["100%", null, null, null, "80%"],
@@ -313,11 +284,6 @@ const styles = {
       color: "#02073E",
       fontWeight: 500,
       width: ["100%", null, null, null, "80%"],
-      // maxWidth: ["100%", null, null, "55%", "500px", "940px", "980px"],
-      // mx: "auto",
-      // mt: "20px",
-      // mb: ["40px", null, null, "65px"],
-      // color: "#edab12",
       span: {
         fontWeight: 600,
       },
@@ -343,10 +309,6 @@ const styles = {
     flexDirection: "column",
     // justifyContent: "flex-start",
     alignItems: "center",
-    // border: "1px solid black",
-    // padding: 5,
-    // height: 450,
-    // width: 800,
     flex: 1,
   },
   imageContainer: {
@@ -358,42 +320,14 @@ const styles = {
     height: 25,
     fill: "#edab12",
   },
-  headerBtn: {
-    backgroundColor: "#00b4d8",
-    fontSize: "16px",
-    fontWeight: "bold",
-    letterSpacing: "-0.16px",
-    borderRadius: "5px",
-    color: "#ffffff",
-    padding: "6.5px 24px",
-    // display: ["none", null, null, null, "inline-block"],
-    display: "inline-block",
-    ml: ["0", null, null, "auto", "0"],
-    mr: ["0", null, null, "20px", "0"],
-    "&:hover": {
-      color: "#fff",
-    },
-    textDecoration: "none",
-  },
-  logo: {
-    display: "block",
-    borderRadius: "10px",
-    mx: "auto",
-    boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.12)",
-    width: 450,
-    height: 300,
-    // objectFit: "contain",
-  },
+
   bannerImage: {
     display: "block",
-    // mx: "auto",
-    // mt: [40, null, null, 0],
     borderRadius: "10px",
     width: [750, null, null, null, 1300],
     height: [300, null, null, null, 450],
     objectFit: "contain",
     position: "relative",
-    // maxWidth: ["100%", null, null, "80%", null, "60%"],
   },
   container: {
     position: "relative",
@@ -403,34 +337,6 @@ const styles = {
     alignItems: "center",
     // border: "1px solid black",
     height: "100%",
-  },
-  bannerSide1: {
-    width: 220,
-    height: 220,
-    objectFit: "contain",
-    top: "30%",
-    left: "0px",
-  },
-  bannerSide2: {
-    width: 220,
-    height: 220,
-    objectFit: "contain",
-    bottom: "5%",
-    left: "0px",
-  },
-  bannerSide3: {
-    width: 220,
-    height: 220,
-    objectFit: "contain",
-    top: "30%",
-    right: "0px",
-  },
-  bannerSide4: {
-    width: 220,
-    height: 220,
-    objectFit: "contain",
-    bottom: "5%",
-    right: "0px",
   },
   bannerIcon1: {
     top: "20%",
@@ -466,101 +372,3 @@ const styles = {
     right: "3%",
   },
 };
-
-// <Image
-//   sx={styles.bannerIcon1}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon1}
-// />
-// <Image
-//   sx={styles.bannerIcon2}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon2}
-// />
-// <Image
-//   sx={styles.bannerIcon3}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon3}
-// />
-// <Image
-//   sx={styles.bannerIcon4}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon4}
-// />
-// <Image
-//   sx={styles.bannerIcon5}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon5}
-// />
-// <Image
-//   sx={styles.bannerIcon6}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon6}
-// />
-// <Image
-//   sx={styles.bannerIcon7}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerIcon7}
-// />
-// {/* feature images */}
-// <Image
-//   sx={styles.bannerSide1}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerSide1}
-// />
-// <Image
-//   sx={styles.bannerSide2}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerSide2}
-// />
-// <Image
-//   sx={styles.bannerSide3}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerSide3}
-// />
-// <Image
-//   sx={styles.bannerSide4}
-//   className="bannerIcon"
-//   alt="banner icon"
-//   src={bannerSide4}
-// />
-
-{
-  /* <Box as="section" id="banner" sx={styles.banner}>
-  {backgroundImagesAnimation()}
-  <Container sx={styles.container}>
-    {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */
-}
-//     <Box sx={styles.para}>
-//       <Heading as="h3">
-//         At <Text as="span">PANACHE </Text>
-//         we do <Text as="span">more than</Text> just{" "}
-//         <Text as="span">teaching</Text>
-//       </Heading>
-//       <Text as="p">
-//         We evolve strong students who are confident and prepared to take on the
-//         challenges in our fast growing world.
-//       </Text>
-//       <Link
-//         path="/"
-//         ml={2}
-//         label="Enroll Now"
-//         sx={styles.headerBtn}
-//         variant="buttons.primary"
-//       />
-//     </Box>
-//     <Box>
-//       <Image src={bannerMainImage} sx={styles.bannerImage} alt="banner moc" />
-//     </Box>
-//   </Container>
-// </Box>; */}

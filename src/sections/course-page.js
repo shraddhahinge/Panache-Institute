@@ -6,6 +6,12 @@ import onlineTeaching from "assets/online-teaching.svg";
 import calender from "assets/calender.svg";
 import rupee from "assets/rupee.svg";
 import { Link } from "components/link";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
+
 const CoursePage = () => {
   const [heading, setHeading] = useState("");
   const [text, setText] = useState("");
@@ -18,6 +24,7 @@ const CoursePage = () => {
     let values = localStorage.getItem("course");
     let formatValues = JSON.parse(values);
     let data = formatValues;
+
     setHeading(data?.heading);
     setText(data?.text);
     setImage(data?.image);
@@ -38,9 +45,14 @@ const CoursePage = () => {
               width: ["100%", null, null, null, "80%"],
               mx: "auto",
               my: 20,
+
+              textAlign: "justify",
+              span: {
+                color: "#edab12",
+              },
             }}
           >
-            {text}
+            {ReactHtmlParser(text)}
           </Text>
           <Grid
             sx={{
@@ -230,9 +242,9 @@ const styles = {
       },
     },
     p: {
-      fontSize: ["18px", null, null, "20px", "20px", "20px"],
-      // fontSize: "18px",
-      lineHeight: 1.25,
+      // fontSize: ["18px", null, null, "20px", "20px", "20px"],
+      fontSize: "20px",
+      lineHeight: 1.5,
       color: "#02073E",
       fontWeight: 500,
       //   width: ["100%", null, null, null, "100%"],

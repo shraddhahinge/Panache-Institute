@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Container, Flex, Text, Heading, Image } from "theme-ui";
 import { Link } from "components/link";
 
-import callImage from "assets/onlineTeaching.jpeg";
+import missionImage from "assets/mission_and_vision.png";
 import JackpotCard from "components/cards/jackpot-card";
 import jackpotImage1 from "assets/jackpot-1-1.png";
 import jackpotImage2 from "assets/jackpot-1-2.png";
@@ -56,7 +56,7 @@ const CallToAction = () => {
             </Link> */}
           </Box>
           <Box sx={styles.images}>
-            <Image src={callImage} alt="call image" />
+            <Image src={missionImage} alt="call image" />
           </Box>
         </Flex>
       </Container>
@@ -69,13 +69,13 @@ export default CallToAction;
 const styles = {
   callToAction: {
     mt: ["90px", null, null, null, "0"],
-    // py: ["50px", null, null, null, "110px", null, "140px"],
+    pt: ["50px", null, null, null, "110px", null, "140px"],
   },
   flex: {
     flexWrap: "wrap",
   },
   content: {
-    flex: ["0 0 100%", null, null, null, "0 0 38.5%"],
+    flex: ["0 0 100%", null, null, null, "0 0 50%"],
     textAlign: ["center", null, null, null, "left"],
     pt: ["80px", null, null, null, "0"],
     maxWidth: ["100%", null, null, "80%", "100%"],
@@ -122,10 +122,10 @@ const styles = {
     textDecoration: "none",
   },
   images: {
-    flex: ["0 0 100%", null, null, null, "0 0 61.5%"],
+    flex: ["0 0 100%", null, null, null, "0 0 50%"],
   },
   jackpotCardBox: {
-    display: ["grid", null, null, null, null, "block"],
-    gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
+    // display: ["grid", null, null, null, null, "block"],
+    // gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
   },
 };
