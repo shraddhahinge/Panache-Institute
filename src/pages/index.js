@@ -15,6 +15,7 @@ import Blogs from "sections/blogs";
 import FAQ from "sections/faq";
 import Subscribe from "sections/subscribe";
 import Features from "sections/features";
+import Events from "sections/events";
 
 export default function IndexPage() {
   return (
@@ -27,6 +28,7 @@ export default function IndexPage() {
           <Services />
           <Jackpot />
           <CallToAction />
+          <Events />
           {/* <Featured /> */}
           {/* <Pricing /> */}
           <Testimonials />

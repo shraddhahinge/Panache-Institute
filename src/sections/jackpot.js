@@ -28,12 +28,24 @@ const Jackpot = () => {
           </Box>
           <Box sx={styles.content}>
             <Box sx={styles.heading}>
-              <Text as="span">Our Resources</Text>
-              <Heading as="h4">
-                Online English classes for kids 4-12 years old
-              </Heading>
+              <Heading as="h4">About Us</Heading>
+              <Text as="p">
+                <Text as="span">PANACHE</Text> has been founded by{" "}
+                <Text as="span">CA Neha Agarwal</Text> who has worked in{" "}
+                <Text as="span">Deloitte, Bangalore</Text> during the early days
+                of her career. Her first venture,{" "}
+                <Text as="span">KIDDOCRAFT</Text> aimed at teaching concepts
+                through crafts which involved learning with fun. Then to broaden
+                the horizon, <Text as="span">PANACHE</Text> was incepted where
+                we have right courses for you at affordable fee structure,
+                whether you want to develop your English communication skills or
+                calculation speed. In order to keep up with the changing times,
+                we ensure regular upgrade and thus, keep updating, improving and
+                even reconstructing our courses time to time to suit to a wide
+                section of learners.
+              </Text>
             </Box>
-            <Box sx={styles.jackpotCardBox}>
+            {/* <Box sx={styles.jackpotCardBox}>
               {JACKPOT_DATA.map(({ image, heading, text }, index) => (
                 <JackpotCard
                   image={image}
@@ -42,7 +54,7 @@ const Jackpot = () => {
                   key={index}
                 />
               ))}
-            </Box>
+            </Box> */}
           </Box>
         </Flex>
       </Container>
@@ -57,7 +69,9 @@ const styles = {
     pt: ["65px", null, null, null, "85px", null, "125px"],
   },
   flex: {
+    // display: "flex",
     flexWrap: "wrap",
+    // alignItems: "flex-start",
   },
   image: {
     flex: ["0 0 100%", null, null, null, null, "0 0 62.5%"],
@@ -71,7 +85,7 @@ const styles = {
   },
   heading: {
     mb: "30px",
-    pt: "60px",
+    pt: "20px",
     textAlign: ["center", null, null, null, null, "left"],
     pl: ["0", null, null, "30px"],
     maxWidth: ["80%", null, null, "100%"],
@@ -85,12 +99,18 @@ const styles = {
       mb: "20px",
     },
     h4: {
+      fontSize: ["23px", null, null, null, "40px"],
+    },
+    p: {
       color: "#0F2137",
-      fontSize: ["23px", null, null, null, "30px", "36px", "44px"],
-      maxWidth: ["100%", null, null, null, null, "90%", "100%"],
+      fontSize: ["23px", null, null, null, "20px"],
+      // maxWidth: ["100%", null, null, null, null, "90%", "100%"],
+      // letterSpacing: "1px",
+      lineHeight: 1.5,
+    },
+    span: {
       fontWeight: 700,
-      letterSpacing: "-1.5px",
-      lineHeight: 1.36,
+      color: "#edab12",
     },
   },
   jackpotCardBox: {

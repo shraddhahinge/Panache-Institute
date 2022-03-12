@@ -3,9 +3,14 @@ import { Box, Text, Heading, Image } from "theme-ui";
 import { Link } from "components/link";
 import arrowAngle from "assets/arrow-angle.svg";
 
-const ServiceCard = ({ image, text, heading, path, width, height }) => {
+const ServiceCard = (props) => {
+  const { image, text, heading, path, sessions, period, price } = props;
   return (
-    <Link path="/course" sx={styles.serviceCard}>
+    <Link
+      path="/course"
+      sx={styles.serviceCard}
+      onClick={() => localStorage.setItem("course", JSON.stringify(props))}
+    >
       {/* <Box sx={styles.container}> */}
       <Box sx={styles.image}>
         <Image

@@ -10,7 +10,7 @@ import FeatureCard from "components/cards/feature-card";
 const featuresData = [
   {
     id: 1,
-    title: "Experiencxed Teachers",
+    title: "Experienced Teachers",
     text: "All our teachers have teaching experience of about a decade and are well-versed with online teaching too.",
     image: Image1,
   },

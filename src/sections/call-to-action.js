@@ -10,13 +10,18 @@ const CallToAction = () => {
   const JACKPOT_DATA = [
     {
       image: jackpotImage1,
-      text: "We teach regardless of your age and help you, do away with all the obstacles on your way to success.",
+      text: "To teach regardless of age and to help students to do away with the obstacles like  language barrier and try to push them ahead on their way to success by making them confident.",
       heading: "Passion to Profession",
     },
     {
       image: jackpotImage2,
-      text: "Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests.",
-      heading: "Engaging program for kids",
+      text: "Our aim is to provide everyone with quality education where they fall in love with learning.",
+      heading: "Love to learn",
+    },
+    {
+      image: jackpotImage2,
+      text: "Going in sync with the skill India movement, we endeavour to equip everyone with communication and calculation skills required  in today's world.",
+      heading: "Skill development",
     },
   ];
   return (
@@ -42,13 +47,13 @@ const CallToAction = () => {
               guidelines ever. Get your tests delivered at let home collect
               sample.
             </Text> */}
-            <Link
+            {/* <Link
               path="https://forms.gle/2sG6pC6zy9X61Dat7/"
               target="_blank"
               sx={styles.button}
             >
               Enroll Now
-            </Link>
+            </Link> */}
           </Box>
           <Box sx={styles.images}>
             <Image src={callImage} alt="call image" />
@@ -63,8 +68,8 @@ export default CallToAction;
 
 const styles = {
   callToAction: {
-    mt: ["-90px", null, null, null, "0"],
-    py: ["50px", null, null, null, "110px", null, "140px"],
+    mt: ["90px", null, null, null, "0"],
+    // py: ["50px", null, null, null, "110px", null, "140px"],
   },
   flex: {
     flexWrap: "wrap",

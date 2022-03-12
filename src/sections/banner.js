@@ -59,8 +59,8 @@ const BANNER_DATA = [
       "Extempore speech",
       "Group discussions",
       "Vast knowledge of grammar",
-      "Critical thinking development through debates",
-      "Mastering calculations using Vedic tricks",
+      "Critical thinking through debates",
+      "Rapid vedic calculation tricks",
     ],
   },
   {

@@ -187,22 +187,25 @@ import Avatar1 from "assets/testimonial-1-1.png";
 import Avatar2 from "assets/testimonial-1-2.png";
 import Avatar3 from "assets/testimonial-1-3.png";
 import Avatar4 from "assets/testimonial-1-4.png";
+import { Link } from "components/link";
+import { useState } from "react";
+import ReadMoreReact from "read-more-react";
 
 const data = [
   {
     id: 1,
-    title: "Lovely Kid Feedback",
+    // title: "Lovely Kid Feedback",
     description:
-      "Thankyou ma'am for teaching us good things. The normal study is to manage life but this study is useful for life time.",
+      "Thankyou ma'am for teaching my child good things. The normal study is to manage life but this study is useful for life time.",
     avatar: Avatar1,
     // image: StudentFeedback1,
     name: "Om",
-    designation: "Grade-1 student",
+    designation: "Mother of Grade-1 student",
     review: 4,
   },
   {
     id: 2,
-    title: "Happy Student Feedback",
+    // title: "Happy Student Feedback",
     description:
       "Thank you ma'am for always motivating. Learning from you was a great experience. You taught with great patience and enthusiastically. Before learning from you neither I was able to express my views nor speak up frequently and fluently. But you really transformed me. You made me confident about myself and always encouraged me to do more. Your sessions were very interactive. And the thing I like the most about the course is Group discussions. Thank you ma'am for providing great knowledge to me.",
     avatar: Avatar2,
@@ -213,7 +216,7 @@ const data = [
   },
   {
     id: 3,
-    title: "Lovely Kid Feedback",
+    // title: "Lovely Kid Feedback",
     description:
       "Neha ma'am is my favourite because she has some special qualities e.g cute, good, honest, clean heart and one important thing soft voice. She is very sweet and amazing!!! I love my Neha ma'am very much.",
     avatar: Avatar3,
@@ -259,11 +262,48 @@ const responsive = {
 };
 
 export default function TestimonialCard() {
+  const [readMore, setReadMore] = useState(false);
+  // const readMorePara = (text) => {
+  //   let text1 = text.substring(0, 80);
+  //   let text2 = text.substring(101);
+
+  //   return (
+  //     <Box>
+  //       <Text as="span">{text1}</Text>
+  //       {readMore ? (
+  //         <Text as="span">{text2}</Text>
+  //       ) : (
+  //         <>
+  //           <Text as="span">...</Text>
+  //           <Text
+  //             // // path="https://forms.gle/2sG6pC6zy9X61Dat7/"
+  //             // target="_blank"
+  //             onClick={() => setReadMore(!readMore)}
+  //             sx={{ color: "blue", cursor: "pointer" }}
+  //           >
+  //             Read More
+  //           </Text>
+  //         </>
+  //       )}
+  //     </Box>
+  //   );
+  // };
+  const readMorePara = (text) => {
+    return (
+      <ReadMoreReact
+        text={text}
+        min={80}
+        ideal={100}
+        max={200}
+        readMoreText={<Text sx={{ color: "blue" }}>Read More</Text>}
+      />
+    );
+  };
   return (
     <section id="testimonial" sx={{ variant: "section.testimonial" }}>
       <BlockTitle
-        title="What students say about us"
-        text="Student testimonial"
+        title="What people say about us"
+        // text="Student testimonial"
       />
       <Box sx={styles.carouselWrapper}>
         <Carousel
@@ -277,7 +317,7 @@ export default function TestimonialCard() {
           dotListClass=""
           draggable
           focusOnSelect={false}
-          infinite={true}
+          infinite={false}
           itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
@@ -294,7 +334,12 @@ export default function TestimonialCard() {
                 {item.title}
               </Heading>
               {/* <Image src={item.image} sx={styles.feedbackImg} /> */}
-              <Text sx={styles.description}>{item.description}</Text>
+              {item.description.length > 150 ? (
+                readMorePara(item.description)
+              ) : (
+                <Text sx={styles.description}>{item.description}</Text>
+              )}
+
               <div className="card-footer">
                 <div className="image">
                   <Image src={item.avatar} alt="Client Image" />
