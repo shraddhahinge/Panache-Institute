@@ -41,7 +41,8 @@ export default {
   },
   // space: [0, 4, 8, 16, 32, 64],
   sizes: {
-    container: ["1350px"],
+    // container: ["1350px"],
+    container: ["100%"],
   },
   // variants can use custom, user-defined names
   layout: {
