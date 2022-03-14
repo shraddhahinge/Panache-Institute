@@ -381,7 +381,8 @@ const styles = {
         null,
         "calc(50% + 865px)",
       ],
-      mr: ["auto", null, null, null, null, null, null, "-220px"],
+      // mr: ["auto", null, null, null, null, null, null, "-220px"],
+      mr: "auto",
       ml: "auto",
       ".react-multi-carousel-item": {
         transition: "all 0.25s",
@@ -430,6 +431,9 @@ const styles = {
         listStyle: "none",
         mb: 0,
         display: "flex",
+        li: {
+          width: "393px",
+        },
       },
       svg: {
         marginRight: "2px",
