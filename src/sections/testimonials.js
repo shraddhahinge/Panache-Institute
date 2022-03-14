@@ -407,6 +407,8 @@ const styles = {
     boxShadow: "0px 0px 1px rgba(38, 78, 118, 0.35)",
     transition: "all 0.3s",
     height: "400px",
+    width: "393px",
+
     borderRadius: "6px",
     p: [
       "30px 20px 35px",
@@ -418,7 +420,7 @@ const styles = {
     ],
     bg: "white",
     textAlign: "left",
-    // margin: "10px",
+
     margin: [
       "28px 5px 30px 5px",
       "28px 20px 30px 20px",
