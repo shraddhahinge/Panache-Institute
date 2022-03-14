@@ -56,7 +56,11 @@ const CallToAction = () => {
             </Link> */}
           </Box>
           <Box sx={styles.images}>
-            <Image src={missionImage} alt="call image" />
+            <Image
+              src={missionImage}
+              alt="call image"
+              className="missionImage"
+            />
           </Box>
         </Flex>
       </Container>
@@ -73,6 +77,7 @@ const styles = {
   },
   flex: {
     flexWrap: "wrap",
+    alignItems: "center",
   },
   content: {
     flex: ["0 0 100%", null, null, null, "0 0 50%"],

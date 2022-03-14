@@ -206,11 +206,12 @@ const FAQ = () => {
           </Box>
           <Box sx={styles.content}>
             <Heading as="h3">
-              Do you have any quesiton? Please ask here we ready to support
+              Do you have any questions? Please ask here, we are ready to
+              support.
             </Heading>
             <Text as="p">
-              If your question is not list here, please feel free to make a
-              manual support.
+              If your question is not in the list, please feel free to contact
+              us.
             </Text>
             <Link sx={styles.askButton} path="#">
               Ask your Question
@@ -269,6 +270,7 @@ const styles = {
     p: "6.5px 19px",
     letterSpacing: "-0.16px",
     mt: "25px",
+    textDecoration: "none",
     transition: "all 500ms ease",
     "&:hover": {
       opacity: 0.8,

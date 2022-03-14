@@ -196,7 +196,7 @@ const data = [
     id: 1,
     // title: "Lovely Kid Feedback",
     description:
-      "Thankyou ma'am for teaching my child good things. The normal study is to manage life but this study is useful for life time.",
+      "Thank you ma'am for developing reading skills in my child at this tender age. Now he need not cram the spelling. Now, my child is also a PHONIC MASTER.",
     avatar: Avatar1,
     // image: StudentFeedback1,
     name: "Om",
@@ -207,7 +207,7 @@ const data = [
     id: 2,
     // title: "Happy Student Feedback",
     description:
-      "Thank you ma'am for always motivating. Learning from you was a great experience. You taught with great patience and enthusiastically. Before learning from you neither I was able to express my views nor speak up frequently and fluently. But you really transformed me. You made me confident about myself and always encouraged me to do more. Your sessions were very interactive. And the thing I like the most about the course is Group discussions. Thank you ma'am for providing great knowledge to me.",
+      "Learning from you ma'am was a great experience. You taught with great patience and enthusiasm. Earlier, neither was I able to express my views nor speak fluently. But you really transformed me. You make me feel confident about myself and always encourage me to do more. Your sessions were very interactive. And the thing I like the most about the course is Group discussions. Thank you ma'am for providing great knowledge to me",
     avatar: Avatar2,
     // image: StudentFeedback2,
     name: "Anshika",
@@ -225,17 +225,17 @@ const data = [
     designation: "Grade-4 student",
     review: 5,
   },
-  // {
-  //   id: 4,
-  //   title: "Happy Student Feedback",
-  //   description:
-  //     "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-  //   avatar: Avatar4,
-  //   image: StudentFeedback2,
-  //   name: "Denny Hilguston",
-  //   designation: "@denny.hil",
-  //   review: 4,
-  // },
+  {
+    id: 4,
+    // title: "Happy Student Feedback",
+    description:
+      "Thanks a lot PANACHE for your ELOQUENT readers and writers course. Now after reading the chapters, he can frame the answers on his own. He scores good marks and has plenty of time to follow his dream of being a cricketer",
+    avatar: Avatar4,
+    // image: StudentFeedback2,
+    name: "Lakshay Kapil",
+    designation: "Mother of Grade-7 student",
+    review: 4,
+  },
 ];
 
 const responsive = {
@@ -309,22 +309,23 @@ export default function TestimonialCard() {
         <Carousel
           additionalTransfrom={0}
           arrows={false}
+          autoplay
           autoPlaySpeed={3000}
           centerMode={false}
           className=""
           containerClass="carousel-container"
-          customButtonGroup={<ButtonGroup />}
+          // customButtonGroup={<ButtonGroup />}
           dotListClass=""
           draggable
-          focusOnSelect={false}
-          infinite={false}
+          focusOnSelect={true}
+          infinite={true}
           itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
-          renderButtonGroupOutside
+          renderButtonGroupOutside={false}
           renderDotsOutside={false}
           responsive={responsive}
-          showDots={false}
+          showDots={true}
           sliderClass=""
           slidesToSlide={1}
         >
@@ -386,9 +387,11 @@ const styles = {
       ml: "auto",
       ".react-multi-carousel-item": {
         transition: "all 0.25s",
+        width: "393px",
+        // height: "300px",
       },
       ".react-multi-carousel-item--active:nth-of-type(4n)": {
-        opacity: "0.5",
+        // opacity: "0.5",
         "@media screen and (max-width: 1620px)": {
           opacity: 1,
         },
@@ -403,6 +406,7 @@ const styles = {
   reviewCard: {
     boxShadow: "0px 0px 1px rgba(38, 78, 118, 0.35)",
     transition: "all 0.3s",
+    height: "400px",
     borderRadius: "6px",
     p: [
       "30px 20px 35px",
@@ -414,7 +418,8 @@ const styles = {
     ],
     bg: "white",
     textAlign: "left",
-    m: [
+    // margin: "10px",
+    margin: [
       "28px 5px 30px 5px",
       "28px 20px 30px 20px",
       "28px 15px 30px 15px",
@@ -424,32 +429,7 @@ const styles = {
     "&:hover": {
       boxShadow: "0px 6px 47px rgba(38, 78, 118, 0.1)",
     },
-    ".rating": {
-      mb: [1, null, null, 2],
-      ul: {
-        pl: 0,
-        listStyle: "none",
-        mb: 0,
-        display: "flex",
-        li: {
-          width: "393px",
-        },
-      },
-      svg: {
-        marginRight: "2px",
-        "&:last-of-type": {
-          marginRight: 0,
-        },
-      },
-      ".star": {
-        color: "yellow",
-        mr: "1px",
-      },
-      ".star-o": {
-        color: "#ddd",
-        mr: "1px",
-      },
-    },
+
     ".card-footer": {
       display: "flex",
       alignItems: "center",

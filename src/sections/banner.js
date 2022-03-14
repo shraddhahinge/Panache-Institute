@@ -250,7 +250,7 @@ const styles = {
         transition: "all 0.25s",
       },
       ".react-multi-carousel-item--active:nth-of-type(4n)": {
-        opacity: "0.5",
+        // opacity: "0.5",
         "@media screen and (max-width: 1620px)": {
           opacity: 1,
         },
