@@ -64,6 +64,12 @@ export default {
       backgroundColor: "background_secondary",
     },
   },
+  section: {
+    testimonial: {
+      py: [8, null, 9, null, null, 10],
+      overflow: "hidden",
+    },
+  },
   text: {
     heading: {
       fontFamily: "heading",
