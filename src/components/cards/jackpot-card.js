@@ -24,11 +24,11 @@ const styles = {
     textAlign: ["center", null, null, "justify"],
     transition: "all 500ms ease",
     borderRadius: "10px",
-    backgroundColor: "#ffffff",
+    // backgroundColor: "#ffffff",
 
-    "&:hover": {
-      boxShadow: " 0px 8px 24px rgba(69, 88, 157, 0.07)",
-    },
+    // "&:hover": {
+    //   boxShadow: " 0px 8px 24px rgba(69, 88, 157, 0.07)",
+    // },
   },
   image: {
     flexShrink: "0",

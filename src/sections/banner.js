@@ -130,7 +130,9 @@ const Banner = () => {
     );
   };
   return (
-    <Box sx={styles.main}>
+    <Box sx={styles.main} as="section" id="banner">
+      <Heading as="h5">{"Learning Beyond School"}</Heading>
+      {backgroundImagesAnimation()}
       <Carousel
         additionalTransfrom={0}
         arrows={false}
@@ -157,7 +159,8 @@ const Banner = () => {
       >
         {BANNER_DATA.map((data, idx) => (
           <Box as="section" id="banner" sx={styles.banner}>
-            {backgroundImagesAnimation()}
+            {/* {backgroundImagesAnimation()} */}
+
             <Heading as="h4">{data?.heading}</Heading>
             <Container sx={styles.container}>
               <Box sx={styles.listContainer}>
@@ -246,6 +249,12 @@ const bannerAnim3 = keyframes`
 
 const styles = {
   main: {
+    // overflow: "hidden",
+    // height: "100vh",
+    // pt: ["180px", null, null, null, "100px"],
+    // pb: 10,
+    // position: "relative",
+    // border: "1px solid red",
     ".carousel-container": {
       width: "100%",
 
@@ -260,40 +269,48 @@ const styles = {
         },
       },
     },
+    ".bannerIcon": {
+      position: "absolute",
+      display: ["none", null, null, null, "block"],
+    },
+    h5: {
+      fontSize: ["20px", null, null, "40px"],
+      position: "absolute",
+      top: "20%",
+      textAlign: "center",
+      width: "100%",
+      color: "#00b4d8",
+      fontFamily: "Fredoka, sans-serif",
+    },
   },
   banner: {
     overflow: "hidden",
     height: "100vh",
     pt: ["180px", null, null, null, "100px"],
     pb: 10,
+    px: 20,
     position: "relative",
     ".bannerIcon": {
       position: "absolute",
       display: ["none", null, null, null, "block"],
     },
     h4: {
-      fontSize: ["20px", null, null, "35px"],
+      fontSize: ["20px", null, null, "30px"],
       lineHeight: [1.2, null, null, null],
-      textAlign: "center",
+      textAlign: ["center", null, null, null, "left"],
       color: "blue",
       position: "absolute",
-      top: "22%",
+      top: ["25%", null, null, null, "30%"],
       // left: "10%",
-      width: "100%",
+      width: ["80%", null, null, null, "100%"],
       color: "#edab12",
       // p: 1,
-      mb: [20, null, null, null],
+      // mb: [50, null, null, null],
+      ml: [10, null, null, null, 50],
+      mt: 10,
+      zIndex: 1,
     },
-    h3: {
-      fontSize: ["35px", null, null, null, "60px"],
-      width: ["100%", null, null, null, "80%"],
-      // mx: "auto",
-      lineHeight: 1.4,
-      fontWeight: "bold",
-      span: {
-        color: "#edab12",
-      },
-    },
+
     p: {
       fontSize: ["18px", null, null, "20px", "20px", "25px", "30px"],
       // fontSize: "18px",
@@ -316,7 +333,7 @@ const styles = {
     justifyContent: "flex-start",
     // border: "1px solid black",
     width: "100%",
-    my: [1, null, null, null, 10],
+    my: [2, null, null, null, 10],
     p: {
       mx: [1, null, null, null, 10],
     },
@@ -342,7 +359,7 @@ const styles = {
     display: "block",
     borderRadius: "10px",
     width: [750, null, null, null, 1300],
-    height: [300, null, null, null, 450],
+    height: [200, null, null, null, 450],
     objectFit: "contain",
     position: "relative",
   },
@@ -354,6 +371,7 @@ const styles = {
     alignItems: "center",
     // border: "1px solid black",
     height: "100%",
+    pt: 80,
   },
   bannerIcon1: {
     top: "20%",

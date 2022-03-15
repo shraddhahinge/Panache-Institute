@@ -105,7 +105,7 @@ const styles = {
       // border: "1px solid black",
     },
     p: {
-      fontSize: "16px",
+      fontSize: "20px",
       lineHeight: 1.87,
       color: "#00b4d8",
       // mt: "20px",

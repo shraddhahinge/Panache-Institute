@@ -10,7 +10,7 @@ import course5 from "assets/course5.png";
 import course6 from "assets/course6.jpeg";
 import course7 from "assets/course7.jpeg";
 import course8 from "assets/course8.jpeg";
-import serviceImage5 from "assets/service-5.png";
+import coursebg from "assets/coursebg1.png";
 import serviceImage6 from "assets/service-6.png";
 
 const SERVICES_DATA = [
@@ -129,8 +129,8 @@ The program is delivered in a fun-filled manner which makes kids curious to lear
 ];
 const Services = () => {
   return (
-    <Box as="section" id="courses" sx={styles.services}>
-      <Container>
+    <Box as="section" id="courses" sx={styles.services} className="wave">
+      <Container className="container">
         <BlockTitle
           title="Courses"
           // text="Courses we provide"
@@ -164,7 +164,16 @@ export default Services;
 
 const styles = {
   services: {
-    mt: ["60px", null, null, null, "150px", null, "100px"],
+    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pb: ["10px", null, null, null, "60px", null, "60px"],
+    mt: [null, null, null, null, "150px", null, "150px"],
+    backgroundColor: "#f7cad0",
+    // background: `url(${coursebg})`,
+
+    // border: "1px solid red",
+    position: "relative",
+    // ".wave:before": {
+    // },
   },
   grid: {
     display: "grid",

@@ -1,22 +1,34 @@
 export default [
   {
     path: "banner",
-    label: "About Us",
+    label: "Home",
+  },
+  {
+    path: "features",
+    label: "Why choose panache?",
   },
   {
     path: "courses",
     label: "Courses",
   },
   {
-    // path: "pricing",
-    label: "Enroll Now",
+    path: "about",
+    label: "About Us",
   },
   {
-    // path: "testimonials",
+    path: "mission",
+    label: "Mission & Vision",
+  },
+  {
+    path: "events",
     label: "Events",
   },
-  // {
-  //   path: "news",
-  //   label: "News",
-  // },
+  {
+    path: "testimonials",
+    label: "Testimonials",
+  },
+  {
+    path: "faq",
+    label: "Faq's",
+  },
 ];

@@ -15,12 +15,13 @@ export default BlockTitle;
 const styles = {
   blockTitle: {
     textAlign: "center",
-    mt: ["60px", null, null, null, "60px", null, "60px"],
-    mb: ["60px", null, null, null, "60px", null, "60px"],
+    mt: ["60px", null, null, null, "40px", null, "40px"],
+    mb: ["60px", null, null, null, "40px", null, "40px"],
 
     h3: {
       color: "#0F2137",
-      fontSize: ["23px", null, null, "30px"],
+      // color: "#fff",
+      fontSize: ["30px", null, null, "40px"],
       fontWeight: 700,
       letterSpacing: "-1.5px",
       lineHeight: 1,

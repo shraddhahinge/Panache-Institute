@@ -6,6 +6,7 @@ import missionImage from "assets/mission_and_vision.png";
 import JackpotCard from "components/cards/jackpot-card";
 import jackpotImage1 from "assets/jackpot-1-1.png";
 import jackpotImage2 from "assets/jackpot-1-2.png";
+import BlockTitle from "components/block-title";
 const CallToAction = () => {
   const JACKPOT_DATA = [
     {
@@ -26,11 +27,15 @@ const CallToAction = () => {
   ];
   return (
     <Box as="section" sx={styles.callToAction}>
+      <BlockTitle
+        title="Mission & Vision"
+        // text="Courses we provide"
+      />
       <Container>
         <Flex sx={styles.flex}>
           <Box sx={styles.content}>
             {/* <Text as="span">Our good mission</Text> */}
-            <Heading as="h4">“Mission and Vision“</Heading>
+            {/* <Heading as="h4">“Mission and Vision“</Heading> */}
             <Box sx={styles.jackpotCardBox}>
               {JACKPOT_DATA.map(({ image, heading, text }, index) => (
                 <JackpotCard
@@ -72,8 +77,9 @@ export default CallToAction;
 
 const styles = {
   callToAction: {
-    mt: ["90px", null, null, null, "0"],
-    pt: ["50px", null, null, null, "110px", null, "140px"],
+    mt: ["10px", null, null, null, "80px", null, "80px"],
+    py: ["10px", null, null, null, "20px", null, "20px"],
+    backgroundColor: "#f3e7e4",
   },
   flex: {
     flexWrap: "wrap",
@@ -82,7 +88,7 @@ const styles = {
   content: {
     flex: ["0 0 100%", null, null, null, "0 0 50%"],
     textAlign: ["center", null, null, null, "left"],
-    pt: ["80px", null, null, null, "0"],
+    pt: ["10px", null, null, null, "0"],
     maxWidth: ["100%", null, null, "80%", "100%"],
     mx: ["auto", null, null, null, "0"],
     mb: ["30px", null, null, null, "0"],

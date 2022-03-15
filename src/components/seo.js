@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 export default function SEO({
-  description = 'startup landing descriptions',
-  author = 'RedQ, Inc',
+  description = "startup landing descriptions",
+  author = "RedQ, Inc",
   meta,
-  title = 'startup landing title',
+  title = "startup landing title",
 }) {
   const metaData = [
     {
@@ -47,6 +47,12 @@ export default function SEO({
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap"
+        rel="stylesheet"
+      ></link>
     </Head>
   );
 }

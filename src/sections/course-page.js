@@ -90,13 +90,17 @@ const CoursePage = () => {
               </Box>
               <Text
                 sx={{
-                  width: 150,
-
-                  textAlign: "left",
+                  width: 155,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  // textAlign: "left",
+                  // border: "1px solid blue",
                 }}
                 as="p"
               >
-                {`${sessions} sessions`}
+                <Text sx={{ fontSize: "50px" }}>{sessions}</Text>
+                <Text>sessions</Text>
               </Text>
             </Box>
             <Box
@@ -124,52 +128,18 @@ const CoursePage = () => {
               </Box>
               <Text
                 sx={{
-                  width: 150,
-
-                  textAlign: "left",
+                  width: 110,
+                  display: "flex",
+                  alignItems: "center",
+                  // textAlign: "left",
+                  justifyContent: "space-between",
                 }}
                 as="p"
               >
-                {`${period} months`}
+                <Text sx={{ fontSize: "50px" }}>{`${period} `}</Text>
+                <Text>{" months"}</Text>
               </Text>
             </Box>
-            {/* {details?.map((data, idx) => (
-              <Box
-                key={idx}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  //   border: "1px solid black",
-                }}
-              >
-                <Box
-                  sx={{
-                    backgroundColor: "#edab12",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 60,
-                    height: 60,
-                    borderRadius: "50%",
-                    mx: 10,
-                  }}
-                >
-                  <Image src={data?.image} sx={{ width: 30, height: 30 }} />
-                </Box>
-                <Text
-                  sx={{
-                    width: 150,
-
-                    textAlign: "left",
-                  }}
-                  as="p"
-                >
-                  {data?.text}
-                </Text>
-              </Box>
-            ))} */}
           </Grid>
           <Box
             sx={{
@@ -189,8 +159,8 @@ const CoursePage = () => {
                 // justifyContent: "flex-start",
               }}
             >
-              <Image src={rupee} sx={{ width: 60, height: 60 }} />
-              <Text sx={{ fontSize: "50px" }}>{price}</Text>
+              <Image src={rupee} sx={{ width: 30, height: 30 }} />
+              <Text sx={{ fontSize: "25px" }}>{price}</Text>
               <Text>/month</Text>
             </Box>
             <Link

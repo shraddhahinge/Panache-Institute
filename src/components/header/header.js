@@ -8,41 +8,39 @@ import MobileDrawer from "./mobileDrawer";
 import menuItems from "./header.data";
 import logoDark from "assets/panache.png";
 
-export default function Header({ className, isCoursePage }) {
+export default function Header({ className }) {
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className}>
         <Container sx={styles.container}>
           <Logo image={logoDark} className={className} />
 
-          {!isCoursePage && (
-            <Flex as="nav" sx={styles.nav}>
-              {menuItems.map(({ path, label }, i) => (
-                <ScrollLink
-                  activeClass="active"
-                  sx={styles.nav.navLink}
-                  to={path}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  key={i}
-                >
-                  {label}
-                </ScrollLink>
-              ))}
-            </Flex>
-          )}
+          <Flex as="nav" sx={styles.nav}>
+            {menuItems.map(({ path, label }, i) => (
+              <ScrollLink
+                activeClass="active"
+                sx={styles.nav.navLink}
+                to={path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={i}
+              >
+                {label}
+              </ScrollLink>
+            ))}
+          </Flex>
 
           <Link
             path="/"
             ml={2}
-            label={isCoursePage ? "Home" : "Contact Us"}
+            label={"Contact Us"}
             sx={styles.headerBtn}
             variant="buttons.primary"
           />
 
-          {!isCoursePage && <MobileDrawer />}
+          <MobileDrawer />
         </Container>
       </header>
     </DrawerProvider>
@@ -103,13 +101,13 @@ const styles = {
       display: "none",
     },
     navLink: {
-      fontSize: "16px",
+      fontSize: "18px",
       // color: "#02073E",
       color: "#000",
       fontWeight: "400",
       cursor: "pointer",
       lineHeight: "1.2",
-      mr: "48px",
+      mr: "30px",
       transition: "500ms",
       ":last-child": {
         mr: "0",

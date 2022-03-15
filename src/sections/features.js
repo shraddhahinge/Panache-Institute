@@ -37,22 +37,20 @@ const featuresData = [
 ];
 const Features = () => {
   return (
-    <>
-      <Box sx={styles.features}>
-        <BlockTitle
-          title="Why choose PANACHE?"
-          // text="Courses we provide"
-        />
-        {/* as="section" id="courses" */}
-        <Container sx={styles.container}>
-          <Grid sx={styles.grid}>
-            {featuresData.map(({ id, title, text, image }, index) => (
-              <FeatureCard key={id} title={title} text={text} image={image} />
-            ))}
-          </Grid>
-        </Container>
-      </Box>
-    </>
+    <Box sx={styles.features} as="section" id="features">
+      <BlockTitle
+        title="Why choose PANACHE?"
+        // text="Courses we provide"
+      />
+      {/* as="section" id="courses" */}
+      <Container sx={styles.container}>
+        <Grid sx={styles.grid}>
+          {featuresData.map(({ id, title, text, image }, index) => (
+            <FeatureCard key={id} title={title} text={text} image={image} />
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
@@ -60,7 +58,7 @@ export default Features;
 
 const styles = {
   features: {
-    py: ["100px", null, null, null, "110px", null, "140px"],
+    py: ["60px", null, null, null, "110px", null, "140px"],
 
     display: "flex",
     flexDirection: "column",

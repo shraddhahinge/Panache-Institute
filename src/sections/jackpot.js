@@ -4,6 +4,7 @@ import JackpotCard from "components/cards/jackpot-card";
 import jackpotImage from "assets/teaching.jpeg";
 import jackpotImage1 from "assets/jackpot-1-1.png";
 import jackpotImage2 from "assets/jackpot-1-2.png";
+import BlockTitle from "components/block-title";
 
 const JACKPOT_DATA = [
   {
@@ -21,6 +22,10 @@ const JACKPOT_DATA = [
 const Jackpot = () => {
   return (
     <Box as="section" sx={styles.jackpot}>
+      <BlockTitle
+        title="About Us"
+        // text="Courses we provide"
+      />
       <Container>
         <Flex sx={styles.flex}>
           <Box sx={styles.image}>
@@ -28,7 +33,7 @@ const Jackpot = () => {
           </Box>
           <Box sx={styles.content}>
             <Box sx={styles.heading}>
-              <Heading as="h4">About Us</Heading>
+              {/* <Heading as="h4">About Us</Heading> */}
               <Text as="p">
                 <Text as="span">PANACHE</Text> has been founded by{" "}
                 <Text as="span">CA Neha Agarwal</Text> who has worked in{" "}
@@ -66,7 +71,8 @@ export default Jackpot;
 
 const styles = {
   jackpot: {
-    pt: ["65px", null, null, null, "85px", null, "125px"],
+    // pt: ["100px", null, null, null, "150px", null, "150px"],
+    mt: ["100px", null, null, null, "100px", null, "100px"],
   },
   flex: {
     // display: "flex",
@@ -74,7 +80,7 @@ const styles = {
     // alignItems: "flex-start",
   },
   image: {
-    flex: ["0 0 100%", null, null, null, null, "0 0 60%"],
+    flex: ["0 0 100%", null, null, null, null, "0 0 30%"],
     img: {
       // maxWidth: ["100%", null, null, null, null, null, "none"],
       // width: 1300,
@@ -85,7 +91,7 @@ const styles = {
     },
   },
   content: {
-    flex: ["0 0 100%", null, null, null, null, "0 0 40%"],
+    flex: ["0 0 100%", null, null, null, null, "0 0 70%"],
   },
   heading: {
     mb: "30px",

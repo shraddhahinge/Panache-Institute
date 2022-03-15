@@ -68,8 +68,11 @@ export default {
   },
   section: {
     testimonial: {
-      py: [8, null, 9, null, null, 10],
+      // py: [8, null, 9, null, null, 10],
       overflow: "hidden",
+      mt: ["100px", null, null, null, "80px", null, "80px"],
+      py: ["50px", null, null, null, "20px", null, "20px"],
+      backgroundColor: "#fef0ef",
     },
   },
   text: {
