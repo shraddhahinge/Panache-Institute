@@ -50,6 +50,7 @@ const BANNER_DATA = [
       "Command over reading.",
       "Game based assessments.",
     ],
+    heading: "Phonic and Reading classes for 4-7yrs old",
   },
   {
     id: 2,
@@ -62,6 +63,7 @@ const BANNER_DATA = [
       "Critical thinking through debates",
       "Rapid vedic calculation tricks",
     ],
+    heading: "English and Vedic Maths classes for 8-18 yrs old",
   },
   {
     id: 3,
@@ -74,6 +76,7 @@ const BANNER_DATA = [
       "Articulation and Pronunciation",
       "Public speaking skills",
     ],
+    heading: "English Vinglish for homemakers and female professionals",
   },
 ];
 const Banner = () => {
@@ -155,6 +158,7 @@ const Banner = () => {
         {BANNER_DATA.map((data, idx) => (
           <Box as="section" id="banner" sx={styles.banner}>
             {backgroundImagesAnimation()}
+            <Heading as="h4">{data?.heading}</Heading>
             <Container sx={styles.container}>
               <Box sx={styles.listContainer}>
                 {data?.list.map((l) => (
@@ -262,11 +266,24 @@ const styles = {
     height: "100vh",
     pt: ["180px", null, null, null, "100px"],
     pb: 10,
+    position: "relative",
     ".bannerIcon": {
       position: "absolute",
       display: ["none", null, null, null, "block"],
     },
-
+    h4: {
+      fontSize: ["20px", null, null, "35px"],
+      lineHeight: 1.2,
+      textAlign: "center",
+      color: "blue",
+      position: "absolute",
+      top: "22%",
+      // left: "10%",
+      width: "100%",
+      color: "#edab12",
+      // p: 1,
+      mb: 20,
+    },
     h3: {
       fontSize: ["35px", null, null, null, "60px"],
       width: ["100%", null, null, null, "80%"],
@@ -299,7 +316,7 @@ const styles = {
     justifyContent: "flex-start",
     // border: "1px solid black",
     width: "100%",
-    my: [2, null, null, null, 10],
+    my: [1, null, null, null, 10],
     p: {
       mx: [1, null, null, null, 10],
     },
@@ -309,10 +326,10 @@ const styles = {
     flexDirection: "column",
     // justifyContent: "flex-start",
     alignItems: "center",
-    flex: 1,
+    // flex: 1,
   },
   imageContainer: {
-    flex: 1,
+    // flex: 1,
     // border: "1px solid black",
   },
   checkMark: {

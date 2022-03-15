@@ -59,7 +59,9 @@ export default {
       alignItems: "center",
       // justifyContent: 'space-between',
     },
-    main: {},
+    main: {
+      overflow: "hidden",
+    },
     footer: {
       backgroundColor: "background_secondary",
     },
