@@ -273,7 +273,7 @@ const styles = {
     },
     h4: {
       fontSize: ["20px", null, null, "35px"],
-      lineHeight: 1.2,
+      lineHeight: [1.2, null, null, null],
       textAlign: "center",
       color: "blue",
       position: "absolute",
@@ -282,7 +282,7 @@ const styles = {
       width: "100%",
       color: "#edab12",
       // p: 1,
-      mb: 20,
+      mb: [20, null, null, null],
     },
     h3: {
       fontSize: ["35px", null, null, null, "60px"],
@@ -326,10 +326,10 @@ const styles = {
     flexDirection: "column",
     // justifyContent: "flex-start",
     alignItems: "center",
-    // flex: 1,
+    flex: [null, null, null, 1],
   },
   imageContainer: {
-    // flex: 1,
+    flex: [null, null, null, 1],
     // border: "1px solid black",
   },
   checkMark: {
