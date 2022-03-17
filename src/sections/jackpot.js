@@ -21,7 +21,7 @@ const JACKPOT_DATA = [
 
 const Jackpot = () => {
   return (
-    <Box as="section" sx={styles.jackpot}>
+    <Box as="section" id="about" sx={styles.jackpot}>
       <BlockTitle
         title="About Us"
         // text="Courses we provide"

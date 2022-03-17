@@ -182,8 +182,8 @@ const styles = {
     gridGap: "30px",
     gridTemplateColumns: [
       "1fr",
-      "1fr 1fr",
-      "1fr 1fr",
+      "1fr",
+      "1fr",
       "1fr 1fr",
       "1fr 1fr 1fr",
       "1fr 1fr 1fr 1fr",

@@ -276,11 +276,12 @@ const styles = {
     h5: {
       fontSize: ["20px", null, null, "40px"],
       position: "absolute",
-      top: "20%",
+      top: "15%",
       textAlign: "center",
       width: "100%",
       color: "#00b4d8",
       fontFamily: "Fredoka, sans-serif",
+      zIndex: 100,
     },
   },
   banner: {
@@ -300,7 +301,7 @@ const styles = {
       textAlign: ["center", null, null, null, "left"],
       color: "blue",
       position: "absolute",
-      top: ["25%", null, null, null, "30%"],
+      top: ["22%", null, null, null, "30%"],
       // left: "10%",
       width: ["80%", null, null, null, "100%"],
       color: "#edab12",

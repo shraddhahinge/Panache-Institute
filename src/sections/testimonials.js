@@ -267,7 +267,11 @@ export default function TestimonialCard() {
     );
   };
   return (
-    <section id="testimonial" sx={{ variant: "section.testimonial" }}>
+    <section
+      as="section"
+      id="testimonials"
+      sx={{ variant: "section.testimonial" }}
+    >
       <BlockTitle
         title="What people say about us"
         // text="Student testimonial"

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Container, Image, Heading, Text } from "theme-ui";
 
 import event1 from "assets/event1.jpg";
-import event2 from "assets/event2.png";
+import event2 from "assets/event2.jpg";
 
 import checkMark from "assets/check-mark.svg";
 
@@ -36,30 +36,19 @@ const BANNER_DATA = [
     id: 1,
     image: event1,
     list: [
-      "Reading through phonetics.",
-      "Builiding public speaking skills.",
-      "Improving pronunciation.",
-      "Basic lessons of grammar.",
-      "Command over reading.",
-      "Game based lessons and assessments.",
+      `Felicitation of 'International tongue twister day'
+Challenge winners...Atharv and Agrim!!🎉`,
     ],
   },
   {
     id: 2,
     image: event2,
-    list: [
-      "Enhancing presentation skills",
-      "Extempore speech",
-      "Group discussions",
-      "Vast knowledge of grammar",
-      "Critical thinking development through debates",
-      "Mastering calculations using Vedic tricks",
-    ],
+    list: [`Session in GD Goenka Public School on account of "Origami Day"!!!`],
   },
 ];
 const Events = () => {
   return (
-    <Box sx={styles.carouselWrapper}>
+    <Box as="section" id="events" sx={styles.carouselWrapper}>
       <BlockTitle
         title="Events"
         // text="Courses we provide"
@@ -235,6 +224,8 @@ const styles = {
     borderRadius: "10px",
     width: [750, null, null, null, 1300],
     height: [300, null, null, null, 450],
+    // width: "100%",
+    // height: "100%",
     objectFit: "contain",
     position: "relative",
     // maxWidth: ["100%", null, null, "80%", null, "60%"],

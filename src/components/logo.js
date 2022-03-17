@@ -27,7 +27,7 @@ const styles = {
   },
   image: {
     width: 200,
-    height: 150,
+    height: 100,
     objectFit: "contain",
     transition: "500ms",
     transition: "all 0.4s ease",

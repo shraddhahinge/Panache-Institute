@@ -49,7 +49,7 @@ export default function Layout({ children, noFooter, coursePage }) {
       >
         {children}
       </main>
-      {!noFooter && <Footer />}
+      {/* && <Footer /> */}
     </React.Fragment>
   );
 }

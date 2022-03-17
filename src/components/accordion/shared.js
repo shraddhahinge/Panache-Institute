@@ -9,7 +9,7 @@ export const AccordionButton = ({ children, ...rest }) => (
       alignItems: "center",
       letterSpacing: "-0.2px",
       cursor: "pointer",
-      fontSize: "25px",
+      fontSize: [22, null, null, null, "25px"],
       lineHeight: 1.5,
       fontWeight: "500",
       border: "none",
@@ -77,9 +77,9 @@ export function AccordionContents({ isOpen, ...props }) {
       variants={variants}
       css={{
         overflowY: "hidden",
-        fontSize: 20,
+        fontSize: [15, null, null, null, 20],
         padding: "0 15px",
-        paddingRight: "40px",
+        paddingRight: [null, null, null, "40px"],
         lineHeight: "30px",
         color: "#343D48",
         "@media(min-width: 768px)": {

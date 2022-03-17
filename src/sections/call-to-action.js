@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Container, Flex, Text, Heading, Image } from "theme-ui";
 import { Link } from "components/link";
 
-import missionImage from "assets/mission_and_vision.png";
+import missionImage from "assets/mission_n_vision.png";
 import JackpotCard from "components/cards/jackpot-card";
 import jackpotImage1 from "assets/jackpot-1-1.png";
 import jackpotImage2 from "assets/jackpot-1-2.png";
@@ -26,7 +26,7 @@ const CallToAction = () => {
     },
   ];
   return (
-    <Box as="section" sx={styles.callToAction}>
+    <Box as="section" id="mission" sx={styles.callToAction}>
       <BlockTitle
         title="Mission & Vision"
         // text="Courses we provide"
