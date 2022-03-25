@@ -57,12 +57,18 @@ const CoursePage = () => {
           <Grid
             sx={{
               mt: [20, null, null, 60],
-              display: "grid",
-              justifyContent: ["flex-start", null, null, null, "center"],
+              display: "flex",
+              justifyContent: "space-between",
               alignItems: "center",
-              //   border: "1px solid black",
-              gridGap: "30px",
-              gridTemplateColumns: ["1fr", "1fr 1fr", "1fr 1fr", "1fr 1fr"],
+              width: "80%",
+              mx: "auto",
+              flexWrap: "wrap",
+              // display: "grid",
+              // justifyContent: ["flex-start", null, null, null, "center"],
+              // alignItems: "center",
+              // //   border: "1px solid black",
+              // gridGap: "30px",
+              // gridTemplateColumns: ["1fr", "1fr 1fr", "1fr 1fr", "1fr 1fr"],
             }}
           >
             <Box
@@ -93,7 +99,7 @@ const CoursePage = () => {
                   width: [160, null, null, null, 155],
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  // justifyContent: "space-between",
                   // textAlign: "left",
                   // border: "1px solid blue",
                 }}
@@ -102,7 +108,7 @@ const CoursePage = () => {
                 <Text sx={{ fontSize: ["40px", null, null, null, "50px"] }}>
                   {sessions}
                 </Text>
-                <Text>sessions</Text>
+                <Text sx={{ ml: 10 }}>sessions</Text>
               </Text>
             </Box>
             <Box
@@ -134,14 +140,14 @@ const CoursePage = () => {
                   display: "flex",
                   alignItems: "center",
                   // textAlign: "left",
-                  justifyContent: "space-between",
+                  // justifyContent: "space-between",
                 }}
                 as="p"
               >
                 <Text
                   sx={{ fontSize: ["40px", null, null, null, "50px"] }}
                 >{`${period} `}</Text>
-                <Text>{" months"}</Text>
+                <Text sx={{ ml: 10 }}>{" months"}</Text>
               </Text>
             </Box>
           </Grid>

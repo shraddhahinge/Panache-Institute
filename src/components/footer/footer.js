@@ -8,35 +8,9 @@ export default function Footer() {
   return (
     <Box as="footer" sx={styles.footer}>
       <Container sx={styles.container}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: ["column", null, null, null, null, "row"],
-          }}
-        >
-          <Logo image={logoLight} />
-          <Text
-            as="p"
-            sx={{
-              color: "#ffffff",
-              opacity: "0.7",
-              fontSize: "14px",
-              ml: "10px",
-              mt: ["10px", null, null, null, null, "0"],
-            }}
-          >
-            {/* Copyright by {new Date().getFullYear()} RedQ, Inc */}
-            PANACHE learning beyond school
-          </Text>
-        </Box>
-        <Box sx={styles.linksWrap}>
-          <Link path="/">Home</Link>
-          <Link path="/">Advertise</Link>
-          <Link path="/">Supports</Link>
-          <Link path="/">Marketing</Link>
-          <Link path="/">FAQ</Link>
-        </Box>
+        <Text sx={{ color: "#fff" }}>
+          Copy right &copy; 2022. All rights reserved
+        </Text>
       </Container>
     </Box>
   );
@@ -61,7 +35,7 @@ const styles = {
   container: {
     display: "flex",
     flexDirection: ["column", null, null, null, null, "row"],
-    justifyContent: ["center", null, null, null, null, "space-between"],
+    justifyContent: "center",
     alignItems: "center",
     position: "relative",
     flexWrap: "wrap",

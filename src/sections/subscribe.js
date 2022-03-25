@@ -36,14 +36,13 @@ const Subscribe = () => {
         <Box className="left">
           <Heading as="h3">Improve your soft skills</Heading>
           <Text as="p">
-            Simplified & straight to the point courses created for you. Maximize
-            your results
+            Simplified & straight to the point courses created for you.
           </Text>
           <Box as="form" sx={styles.form}>
             <Box as="label" htmlFor="subscribeEmail" variant="styles.srOnly">
               Email
             </Box>
-            <Input
+            {/* <Input
               placeholder="Enter your email"
               type="email"
               id="subscribeEmail"
@@ -53,16 +52,16 @@ const Subscribe = () => {
                 ...styles.input,
                 backgroundColor: "rgba(255,255,255, .08)",
               }}
-            />
-            <a
-              href={`mailto:${email}`}
-              target="_blank"
-              sx={{ textDecoration: "none" }}
-            >
-              <Button type="submit" sx={styles.button}>
-                Subscribe us
-              </Button>
-            </a>
+            /> */}
+            <Button sx={styles.button}>
+              <a
+                href={`mailto:panache1983@gmail.com`}
+                target="_blank"
+                // sx={{ textDecoration: "none" }}
+              >
+                Mail us
+              </a>
+            </Button>
           </Box>
           <Box sx={styles.socialContainer}>
             <Text as="p">Follow us on</Text>
@@ -196,6 +195,10 @@ const styles = {
     "&:hover": {
       backgroundColor: "#fff",
       opacity: "0.8",
+    },
+    a: {
+      textDecoration: "none",
+      color: "#020718",
     },
   },
   container: {

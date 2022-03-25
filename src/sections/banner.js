@@ -13,6 +13,11 @@ import bannerIcon5 from "assets/banner-icon-1-5.svg";
 import bannerIcon6 from "assets/banner-icon-1-6.svg";
 import bannerIcon7 from "assets/dot-pattern.svg";
 import checkMark from "assets/check-mark.svg";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
 
 import Carousel from "react-multi-carousel";
 const responsive = {
@@ -50,7 +55,8 @@ const BANNER_DATA = [
       "Command over reading.",
       "Game based assessments.",
     ],
-    heading: "Phonic and Reading classes for 4-7yrs old",
+    heading:
+      "<span>Phonic</span> and <span>Reading</span> classes for 4-7yrs old",
   },
   {
     id: 2,
@@ -63,7 +69,8 @@ const BANNER_DATA = [
       "Critical thinking through debates",
       "Rapid vedic calculation tricks",
     ],
-    heading: "English and Vedic Maths classes for 8-18 yrs old",
+    heading:
+      "<span>English</span> and <span>Vedic Maths</span> classes for 8-18 yrs old",
   },
   {
     id: 3,
@@ -76,7 +83,8 @@ const BANNER_DATA = [
       "Articulation and Pronunciation",
       "Public speaking skills",
     ],
-    heading: "English Vinglish for homemakers and female professionals",
+    heading:
+      "<span>English Vinglish</span> for homemakers and female professionals",
   },
 ];
 const Banner = () => {
@@ -161,7 +169,10 @@ const Banner = () => {
           <Box as="section" id="banner" sx={styles.banner}>
             {/* {backgroundImagesAnimation()} */}
 
-            <Heading as="h4">{data?.heading}</Heading>
+            {/* <Heading as="h4">{data?.heading}</Heading>
+             */}
+            <Heading as="h4">{ReactHtmlParser(data?.heading)}</Heading>
+
             <Container sx={styles.container}>
               <Box sx={styles.listContainer}>
                 {data?.list.map((l, idx) => (
@@ -312,6 +323,9 @@ const styles = {
       zIndex: 1,
       fontWeight: "bold",
       fontFamily: "Hurricane, cursive",
+      span: {
+        color: "#023e8a",
+      },
     },
 
     p: {

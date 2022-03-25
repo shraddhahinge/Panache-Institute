@@ -10,6 +10,11 @@ import checkMark from "assets/check-mark.svg";
 
 import Carousel from "react-multi-carousel";
 import BlockTitle from "components/block-title";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1619 },
@@ -37,28 +42,28 @@ const BANNER_DATA = [
   {
     id: 1,
     image: event1,
-    list: `Felicitation of 'International tongue twister day'
+    list: `Felicitation of <span>'International tongue twister day'</span>
 Challenge winners...Atharv and Agrim!!🎉`,
   },
   {
     id: 2,
     image: event2,
-    list: `Session in GD Goenka Public School on account of "Origami Day"!!!`,
+    list: `Session in GD Goenka Public School on account of <span>"Origami Day"!!!</span>`,
   },
   {
     id: 3,
     image: event3,
-    list: `Grooming session for Hospital staff!!`,
+    list: `<span>Grooming session</span> for Hospital staff!!`,
   },
   {
     id: 4,
     image: event4,
-    list: `Christmas celebration in our centre and Little millennium School!!`,
+    list: `<span>Christmas celebration</span> in our centre and Little millennium School!!`,
   },
   {
     id: 5,
     image: event5,
-    list: `Graduation ceremony of our Panachians!!!`,
+    list: `<span>Graduation ceremony</span> of our Panachians!!!`,
   },
 ];
 const Events = () => {
@@ -98,8 +103,8 @@ const Events = () => {
               {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */}
               <Box sx={styles.listContainer}>
                 <Box sx={styles.paraContainer}>
-                  <Image src={checkMark} sx={styles.checkMark} />
-                  <Text as="p">{data.list}</Text>
+                  {/* <Image src={checkMark} sx={styles.checkMark} /> */}
+                  <Text as="p">{ReactHtmlParser(data?.list)}</Text>
                 </Box>
               </Box>
               <Box sx={styles.imageContainer}>
@@ -160,14 +165,17 @@ const styles = {
       },
     },
     p: {
-      fontSize: ["30px", null, null, "30px", "30px", "50px", "50px"],
+      // fontSize: ["30px", null, null, "30px", "30px", "50px", "50px"],
+      fontSize: ["30px", null, null, "40px"],
       // fontSize: "18px",
       lineHeight: 1.25,
+      textAlign: ["center", null, null, null, null],
       color: "#02073E",
       fontWeight: 500,
       width: ["100%", null, null, null, "80%"],
       fontFamily: "Shadows Into Light, cursive",
       span: {
+        fontSize: ["40px", null, null, "30px", "30px", "50px", "50px"],
         fontWeight: 600,
       },
     },
@@ -238,8 +246,8 @@ const styles = {
     // mx: "auto",
     // mt: [40, null, null, 0],
     borderRadius: "10px",
-    width: [750, null, null, null, 1300],
-    height: [300, null, null, null, 450],
+    width: [750, null, null, null, 1400],
+    height: [300, null, null, null, 500],
     // width: "100%",
     // height: "100%",
     objectFit: "contain",

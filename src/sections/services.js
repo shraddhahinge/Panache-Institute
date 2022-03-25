@@ -3,7 +3,7 @@ import { Box, Container, Grid } from "theme-ui";
 import BlockTitle from "components/block-title";
 import ServiceCard from "components/cards/service-card";
 import course1 from "assets/course1.png";
-import course2 from "assets/course2.jpeg";
+import course2 from "assets/course2.png";
 import course3 from "assets/course3.jpeg";
 import course4 from "assets/course4.png";
 import course5 from "assets/course5.png";
@@ -27,7 +27,7 @@ const SERVICES_DATA = [
     heading: "Eloquent Writers & Speakers",
     tagline: "Kids aged 10 to 18yrs.",
     path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
-    sessions: 36,
+    sessions: 40,
     period: 3,
     price: 2000,
   },
@@ -61,7 +61,7 @@ We also provide with the <span>comprehensive assessments</span> of the concepts 
     heading: "The Magic of Vedic Maths",
     tagline: "Kids aged 11 to 16 yrs.",
     path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
-    sessions: 72,
+    sessions: 80,
     period: 6,
     price: 2000,
   },
@@ -84,8 +84,8 @@ It’s not just about reading, it involves <span>extracting the correct meaning,
 `,
     heading: "Passionate Readers",
     tagline: "Kids aged 8 to 11 yrs.",
-    path: "#",
-    sessions: 48,
+    path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
+    sessions: 50,
     period: 4,
     price: 2000,
   },
@@ -97,9 +97,9 @@ We leave no stone unturned in building confidence and preparing you to face the 
 `,
     heading: "English Vinglish",
     tagline: "For HOMEMAKERS & female PROFESSIONALS",
-    path: "#",
-    sessions: 60,
-    period: 3,
+    path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
+    sessions: 80,
+    period: 4,
     price: 3000,
   },
   {
@@ -109,20 +109,20 @@ Kids learn to read efficiently and effectively at a tender age. Also they are ta
 `,
     heading: "Phonic Masters",
     tagline: "Kids aged 4 to 7 yrs.",
-    path: "#",
+    path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
     sessions: 120,
     period: 6,
     price: 3000,
   },
   {
     image: course8,
-    text: `In this course we provide the knowledge about the routine happenings around the world. Also, the general facts which are apt for student’s age. 
-The program is delivered in a fun-filled manner which makes kids curious to learn more.
+    text: `In this course we provide the knowledge about the routine <span>happenings around the world.</span> Also, the general facts which are apt for student’s age. 
+The program is delivered in a <span>fun-filled</span> manner which makes kids curious to learn more.
 `,
     heading: "Informed Panachians",
     tagline: "Kids aged 8 to 11yrs.",
-    path: "#",
-    sessions: 36,
+    path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
+    sessions: 40,
     period: 3,
     price: 2000,
   },
