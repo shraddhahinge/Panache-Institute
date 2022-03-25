@@ -3,7 +3,9 @@ import { Box, Container, Image, Heading, Text } from "theme-ui";
 
 import event1 from "assets/event1.jpg";
 import event2 from "assets/event2.jpg";
-
+import event3 from "assets/event3.jpg";
+import event4 from "assets/event4.jpg";
+import event5 from "assets/event5.jpg";
 import checkMark from "assets/check-mark.svg";
 
 import Carousel from "react-multi-carousel";
@@ -35,15 +37,28 @@ const BANNER_DATA = [
   {
     id: 1,
     image: event1,
-    list: [
-      `Felicitation of 'International tongue twister day'
+    list: `Felicitation of 'International tongue twister day'
 Challenge winners...Atharv and Agrim!!🎉`,
-    ],
   },
   {
     id: 2,
     image: event2,
-    list: [`Session in GD Goenka Public School on account of "Origami Day"!!!`],
+    list: `Session in GD Goenka Public School on account of "Origami Day"!!!`,
+  },
+  {
+    id: 3,
+    image: event3,
+    list: `Grooming session for Hospital staff!!`,
+  },
+  {
+    id: 4,
+    image: event4,
+    list: `Christmas celebration in our centre and Little millennium School!!`,
+  },
+  {
+    id: 5,
+    image: event5,
+    list: `Graduation ceremony of our Panachians!!!`,
   },
 ];
 const Events = () => {
@@ -82,12 +97,10 @@ const Events = () => {
             <Container sx={styles.container}>
               {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */}
               <Box sx={styles.listContainer}>
-                {data?.list.map((l) => (
-                  <Box sx={styles.paraContainer}>
-                    <Image src={checkMark} sx={styles.checkMark} />
-                    <Text as="p">{l}</Text>
-                  </Box>
-                ))}
+                <Box sx={styles.paraContainer}>
+                  <Image src={checkMark} sx={styles.checkMark} />
+                  <Text as="p">{data.list}</Text>
+                </Box>
               </Box>
               <Box sx={styles.imageContainer}>
                 <Image
@@ -108,6 +121,9 @@ export default Events;
 
 const styles = {
   carouselWrapper: {
+    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pb: ["10px", null, null, null, "60px", null, "60px"],
+    mt: [null, null, null, null, "80px", null, "80px"],
     ".carousel-container": {
       width: "100%",
       pb: 50,
@@ -144,13 +160,13 @@ const styles = {
       },
     },
     p: {
-      fontSize: ["18px", null, null, "20px", "20px", "25px", "30px"],
+      fontSize: ["30px", null, null, "30px", "30px", "50px", "50px"],
       // fontSize: "18px",
       lineHeight: 1.25,
       color: "#02073E",
       fontWeight: 500,
       width: ["100%", null, null, null, "80%"],
-
+      fontFamily: "Shadows Into Light, cursive",
       span: {
         fontWeight: 600,
       },
@@ -187,8 +203,8 @@ const styles = {
     // border: "1px solid black",
   },
   checkMark: {
-    width: 25,
-    height: 25,
+    width: 40,
+    height: 40,
     fill: "#edab12",
   },
   headerBtn: {

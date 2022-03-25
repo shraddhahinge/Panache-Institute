@@ -164,8 +164,8 @@ const Banner = () => {
             <Heading as="h4">{data?.heading}</Heading>
             <Container sx={styles.container}>
               <Box sx={styles.listContainer}>
-                {data?.list.map((l) => (
-                  <Box sx={styles.paraContainer}>
+                {data?.list.map((l, idx) => (
+                  <Box key={l.id} sx={styles.paraContainer}>
                     <Image src={checkMark} sx={styles.checkMark} />
                     <Text as="p">{l}</Text>
                   </Box>
@@ -274,7 +274,7 @@ const styles = {
       display: ["none", null, null, null, "block"],
     },
     h5: {
-      fontSize: ["20px", null, null, "40px"],
+      fontSize: ["22px", null, null, "40px"],
       position: "absolute",
       top: "15%",
       textAlign: "center",
@@ -296,12 +296,12 @@ const styles = {
       display: ["none", null, null, null, "block"],
     },
     h4: {
-      fontSize: ["20px", null, null, "30px"],
+      fontSize: ["35px", null, null, "60px"],
       lineHeight: [1.2, null, null, null],
       textAlign: ["center", null, null, null, "left"],
       color: "blue",
       position: "absolute",
-      top: ["22%", null, null, null, "30%"],
+      top: ["20%", null, null, null, "25%"],
       // left: "10%",
       width: ["80%", null, null, null, "100%"],
       color: "#edab12",
@@ -310,6 +310,8 @@ const styles = {
       ml: [10, null, null, null, 50],
       mt: 10,
       zIndex: 1,
+      fontWeight: "bold",
+      fontFamily: "Hurricane, cursive",
     },
 
     p: {
@@ -334,7 +336,7 @@ const styles = {
     justifyContent: "flex-start",
     // border: "1px solid black",
     width: "100%",
-    my: [2, null, null, null, 10],
+    my: ["6px", null, null, null, 10],
     p: {
       mx: [1, null, null, null, 10],
     },

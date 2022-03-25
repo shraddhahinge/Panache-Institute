@@ -1,31 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Input, Box, Container, Heading, Text, Image } from "theme-ui";
 import logoImage from "../assets/panache.png";
 import whatsapp from "../assets/whatsapp.png";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
+import { FaGlassMartiniAlt } from "react-icons/fa";
 const SOCIAL_LOGO = [
   {
     id: 1,
+    link: "https://wa.me/message/AT5K42DIDLQCF1",
     image: whatsapp,
   },
   {
     id: 2,
+    link: "https://www.facebook.com/askpanache/",
     image: facebook,
   },
   {
     id: 3,
+    link: "https://www.instagram.com/panache_learning/",
     image: instagram,
   },
   {
     id: 4,
+    link: "https://www.linkedin.com/company/panache-learning/",
     image: linkedin,
   },
 ];
 const Subscribe = () => {
+  const [email, setEmail] = useState(null);
   return (
-    <Box as="section" sx={styles.subscribe}>
+    <Box as="section" id="subscribe" sx={styles.subscribe}>
       <Container sx={styles.container}>
         <Box className="left">
           <Heading as="h3">Improve your soft skills</Heading>
@@ -41,24 +47,37 @@ const Subscribe = () => {
               placeholder="Enter your email"
               type="email"
               id="subscribeEmail"
-              sx={styles.input}
+              value={email}
+              onChange={(text) => setEmail(text)}
+              sx={{
+                ...styles.input,
+                backgroundColor: "rgba(255,255,255, .08)",
+              }}
             />
-            <Button type="submit" sx={styles.button}>
-              Subscribe us
-            </Button>
+            <a
+              href={`mailto:${email}`}
+              target="_blank"
+              sx={{ textDecoration: "none" }}
+            >
+              <Button type="submit" sx={styles.button}>
+                Subscribe us
+              </Button>
+            </a>
           </Box>
           <Box sx={styles.socialContainer}>
             <Text as="p">Follow us on</Text>
             <Box sx={styles.logoContainer}>
-              {SOCIAL_LOGO?.map(({ id, image }, idx) => (
-                <Image
-                  src={image}
-                  sx={{
-                    width: 40,
-                    height: 40,
-                    objectFit: "contain",
-                  }}
-                />
+              {SOCIAL_LOGO?.map(({ id, link, image }, idx) => (
+                <a href={link} target="_blank" sx={{ textDecoration: "none" }}>
+                  <Image
+                    src={image}
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      objectFit: "contain",
+                    }}
+                  />
+                </a>
               ))}
             </Box>
           </Box>
@@ -152,7 +171,7 @@ const styles = {
     maxWidth: [null, null, "370px", "380px"],
     borderRadius: "5px",
     border: "none",
-    backgroundColor: "rgba(255,255,255, .08)",
+    // backgroundColor: "rgba(255,255,255, .08)",
     outline: "none",
     color: "rgba(255,255,255, .8)",
     fontSize: "16px",

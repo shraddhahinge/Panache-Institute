@@ -72,7 +72,10 @@ export default Jackpot;
 const styles = {
   jackpot: {
     // pt: ["100px", null, null, null, "150px", null, "150px"],
-    mt: ["100px", null, null, null, "100px", null, "100px"],
+    // mt: ["100px", null, null, null, "100px", null, "100px"],
+    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pb: ["10px", null, null, null, "60px", null, "60px"],
+    mt: [null, null, null, null, "60px", null, "60px"],
   },
   flex: {
     // display: "flex",

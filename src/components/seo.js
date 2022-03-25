@@ -53,6 +53,14 @@ export default function SEO({
         href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap"
         rel="stylesheet"
       ></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap"
+        rel="stylesheet"
+      ></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+        rel="stylesheet"
+      ></link>
     </Head>
   );
 }

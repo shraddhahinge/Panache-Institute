@@ -58,7 +58,7 @@ const CoursePage = () => {
             sx={{
               mt: [20, null, null, 60],
               display: "grid",
-              justifyContent: "center",
+              justifyContent: ["flex-start", null, null, null, "center"],
               alignItems: "center",
               //   border: "1px solid black",
               gridGap: "30px",
@@ -90,7 +90,7 @@ const CoursePage = () => {
               </Box>
               <Text
                 sx={{
-                  width: 155,
+                  width: [160, null, null, null, 155],
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -99,7 +99,9 @@ const CoursePage = () => {
                 }}
                 as="p"
               >
-                <Text sx={{ fontSize: "50px" }}>{sessions}</Text>
+                <Text sx={{ fontSize: ["40px", null, null, null, "50px"] }}>
+                  {sessions}
+                </Text>
                 <Text>sessions</Text>
               </Text>
             </Box>
@@ -136,7 +138,9 @@ const CoursePage = () => {
                 }}
                 as="p"
               >
-                <Text sx={{ fontSize: "50px" }}>{`${period} `}</Text>
+                <Text
+                  sx={{ fontSize: ["40px", null, null, null, "50px"] }}
+                >{`${period} `}</Text>
                 <Text>{" months"}</Text>
               </Text>
             </Box>

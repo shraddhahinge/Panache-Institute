@@ -31,4 +31,8 @@ export default [
     path: "faq",
     label: "Faq's",
   },
+  // {
+  //   // path: "subscribe",
+  //   // label: "Faq's",
+  // },
 ];

@@ -58,8 +58,10 @@ export default Features;
 
 const styles = {
   features: {
-    py: ["60px", null, null, null, "110px", null, "140px"],
-
+    // py: ["60px", null, null, null, "110px", null, "140px"],
+    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pb: ["10px", null, null, null, "60px", null, "60px"],
+    mt: [null, null, null, null, "80px", null, "80px"],
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

@@ -227,7 +227,10 @@ export default FAQ;
 
 const styles = {
   faq: {
-    mt: 50,
+    // mt: 50,
+    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pb: ["10px", null, null, null, "60px", null, "60px"],
+    mt: [null, null, null, null, "80px", null, "80px"],
   },
   flex: {
     flexWrap: "wrap",

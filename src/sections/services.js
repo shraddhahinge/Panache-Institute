@@ -166,7 +166,7 @@ const styles = {
   services: {
     pt: ["2px", null, null, null, "20px", null, "20px"],
     pb: ["10px", null, null, null, "60px", null, "60px"],
-    mt: [null, null, null, null, "150px", null, "150px"],
+    mt: [null, null, null, null, "180px", null, "180px"],
     backgroundColor: "#f7cad0",
     // background: `url(${coursebg})`,
 
