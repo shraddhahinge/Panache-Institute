@@ -76,7 +76,7 @@ const Events = () => {
       <Carousel
         additionalTransfrom={0}
         arrows={false}
-        autoPlay
+        // autoPlay
         autoPlaySpeed={3000}
         centerMode={false}
         className=""
@@ -258,7 +258,7 @@ const styles = {
     position: "relative",
     display: "flex",
     flexDirection: ["column", null, null, null, "row"],
-    justifyContent: "center",
+    justifyContent: ["space-between", null, null, null, "center"],
     alignItems: "center",
     // border: "1px solid black",
     height: "100%",

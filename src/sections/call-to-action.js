@@ -4,8 +4,10 @@ import { Link } from "components/link";
 
 import missionImage from "assets/mission_n_vision.png";
 import JackpotCard from "components/cards/jackpot-card";
-import jackpotImage1 from "assets/jackpot-1-1.png";
-import jackpotImage2 from "assets/jackpot-1-2.png";
+
+import jackpotImage2 from "assets/homework.png";
+import jackpotImage3 from "assets/idea.png";
+import jackpotImage1 from "assets/passion.png";
 import BlockTitle from "components/block-title";
 const CallToAction = () => {
   const JACKPOT_DATA = [
@@ -20,7 +22,7 @@ const CallToAction = () => {
       heading: "Love to learn",
     },
     {
-      image: jackpotImage2,
+      image: jackpotImage3,
       text: "Going in sync with the skill India movement, we endeavour to equip everyone with communication and calculation skills required  in today's world.",
       heading: "Skill development",
     },
@@ -135,6 +137,7 @@ const styles = {
   images: {
     flex: ["0 0 100%", null, null, null, "0 0 50%"],
   },
+
   jackpotCardBox: {
     // display: ["grid", null, null, null, null, "block"],
     // gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],

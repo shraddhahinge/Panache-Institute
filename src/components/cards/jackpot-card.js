@@ -4,7 +4,7 @@ const JackpotCard = ({ image, heading, text }) => {
   return (
     <Box sx={styles.jackpotCard}>
       <Box sx={styles.image}>
-        <Image src={image} alt={heading} />
+        <Image sx={styles.icon} src={image} alt={heading} />
       </Box>
       <Box sx={styles.content}>
         <Heading as="h3">{heading}</Heading>
@@ -35,6 +35,12 @@ const styles = {
     mr: ["0", null, null, "30px"],
     mb: ["20px", null, null, "0px"],
   },
+
+  icon: {
+    height: 60,
+    width: 60,
+  },
+
   content: {
     h3: {
       color: "#0F2137",

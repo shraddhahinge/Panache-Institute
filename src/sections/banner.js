@@ -166,7 +166,7 @@ const Banner = () => {
         swipeable
       >
         {BANNER_DATA.map((data, idx) => (
-          <Box as="section" id="banner" sx={styles.banner}>
+          <Box as="section" id="banner" key={data?.id} sx={styles.banner}>
             {/* {backgroundImagesAnimation()} */}
 
             {/* <Heading as="h4">{data?.heading}</Heading>
@@ -176,7 +176,7 @@ const Banner = () => {
             <Container sx={styles.container}>
               <Box sx={styles.listContainer}>
                 {data?.list.map((l, idx) => (
-                  <Box key={l.id} sx={styles.paraContainer}>
+                  <Box key={idx} sx={styles.paraContainer}>
                     <Image src={checkMark} sx={styles.checkMark} />
                     <Text as="p">{l}</Text>
                   </Box>

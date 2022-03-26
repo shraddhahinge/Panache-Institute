@@ -5,7 +5,9 @@ import whatsapp from "../assets/whatsapp.png";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
+import email from "../assets/gmail.png";
 import { FaGlassMartiniAlt } from "react-icons/fa";
+import Footer from "components/footer/footer";
 const SOCIAL_LOGO = [
   {
     id: 1,
@@ -26,6 +28,11 @@ const SOCIAL_LOGO = [
     id: 4,
     link: "https://www.linkedin.com/company/panache-learning/",
     image: linkedin,
+  },
+  {
+    id: 5,
+    link: `mailto:panache1983@gmail.com?subject = How do I enroll in course?`,
+    image: email,
   },
 ];
 const Subscribe = () => {
@@ -53,7 +60,7 @@ const Subscribe = () => {
                 backgroundColor: "rgba(255,255,255, .08)",
               }}
             /> */}
-            <Button sx={styles.button}>
+            {/* <Button sx={styles.button}>
               <a
                 href={`mailto:panache1983@gmail.com`}
                 target="_blank"
@@ -61,10 +68,10 @@ const Subscribe = () => {
               >
                 Mail us
               </a>
-            </Button>
+            </Button> */}
           </Box>
           <Box sx={styles.socialContainer}>
-            <Text as="p">Follow us on</Text>
+            <Text as="p">Contact with us on</Text>
             <Box sx={styles.logoContainer}>
               {SOCIAL_LOGO?.map(({ id, link, image }, idx) => (
                 <a href={link} target="_blank" sx={{ textDecoration: "none" }}>
@@ -103,6 +110,8 @@ const Subscribe = () => {
           />
         </Box>
       </Container>
+      <Footer />
+
       {/* <Box sx={styles.socialContainer}>
         <Text as="p">Follow us on</Text>
         <Box sx={styles.logoContainer}>
@@ -126,13 +135,13 @@ export default Subscribe;
 
 const styles = {
   subscribe: {
-    py: ["80px", null, null, null, "80px", "40px", "60px"],
+    pt: ["80px", null, null, null, "40px", "40px", "40px"],
     // padding: "10px",
     backgroundColor: "#020718",
-    height: "100vh",
+    height: "80vh",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     h3: {
       textAlign: "center",
       fontSize: ["23px", null, null, null, null, "80px", "80px"],
@@ -226,7 +235,7 @@ const styles = {
     display: [null, null, null, "flex"],
     alignItems: "center",
     justifyContent: "space-between",
-    width: [null, null, null, 450],
+    width: [null, null, null, 500],
     // textAlign: "left",
     mt: [20, null, null, null, 80],
   },

@@ -8,6 +8,7 @@ import { Link as ScrollLink } from "react-scroll";
 import menuItems from "./header.data";
 import Logo from "components/logo";
 import logoDark from "assets/panache.png";
+import { Link } from "components/link";
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -53,9 +54,27 @@ const MobileDrawer = () => {
           </Box>
 
           <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button}>
+            {/* <Button variant="primary" sx={styles.button}>
               Contact Us
-            </Button>
+            </Button> */}
+            <ScrollLink
+              activeClass="active"
+              // sx={styles.nav.navLink}
+              to={"subscribe"}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              // key={i}
+            >
+              <Link
+                path="/"
+                ml={2}
+                label={"Contact Us"}
+                sx={styles.headerBtn}
+                variant="buttons.primary"
+              />
+            </ScrollLink>
           </Box>
         </Box>
       </Scrollbars>
@@ -91,7 +110,25 @@ const styles = {
     right: "30px",
     zIndex: "1",
   },
-
+  headerBtn: {
+    backgroundColor: "#00b4d8",
+    fontSize: "16px",
+    fontWeight: "bold",
+    letterSpacing: "-0.16px",
+    borderRadius: "5px",
+    color: "#ffffff",
+    padding: "10px 24px",
+    // height: "40px",
+    display: "inline-block",
+    width: 300,
+    textAlign: "center",
+    ml: ["0", null, null, "auto", "0"],
+    mr: ["0", null, null, "20px", "0"],
+    "&:hover": {
+      color: "#fff",
+    },
+    textDecoration: "none",
+  },
   content: {
     width: "100%",
     height: "100%",
