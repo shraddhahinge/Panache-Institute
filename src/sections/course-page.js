@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Container, Image, Heading, Text, Grid } from "theme-ui";
-import { keyframes } from "@emotion/core";
-import courseImage from "assets/banner.jpeg";
+
 import onlineTeaching from "assets/online-teaching.svg";
 import calender from "assets/calender.svg";
 import rupee from "assets/rupee.svg";

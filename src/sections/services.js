@@ -10,8 +10,6 @@ import course5 from "assets/course5.png";
 import course6 from "assets/course6.jpeg";
 import course7 from "assets/course7.jpeg";
 import course8 from "assets/course8.jpeg";
-import coursebg from "assets/coursebg1.png";
-import serviceImage6 from "assets/service-6.png";
 
 const SERVICES_DATA = [
   {
@@ -168,12 +166,7 @@ const styles = {
     pb: ["10px", null, null, null, "60px", null, "60px"],
     mt: [null, null, null, null, "180px", null, "180px"],
     backgroundColor: "#f7cad0",
-    // background: `url(${coursebg})`,
-
-    // border: "1px solid red",
     position: "relative",
-    // ".wave:before": {
-    // },
   },
   grid: {
     display: "grid",

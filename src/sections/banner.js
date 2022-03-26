@@ -167,10 +167,6 @@ const Banner = () => {
       >
         {BANNER_DATA.map((data, idx) => (
           <Box as="section" id="banner" key={data?.id} sx={styles.banner}>
-            {/* {backgroundImagesAnimation()} */}
-
-            {/* <Heading as="h4">{data?.heading}</Heading>
-             */}
             <Heading as="h4">{ReactHtmlParser(data?.heading)}</Heading>
 
             <Container sx={styles.container}>
@@ -260,12 +256,6 @@ const bannerAnim3 = keyframes`
 
 const styles = {
   main: {
-    // overflow: "hidden",
-    // height: "100vh",
-    // pt: ["180px", null, null, null, "100px"],
-    // pb: 10,
-    // position: "relative",
-    // border: "1px solid red",
     ".carousel-container": {
       width: "100%",
 
@@ -313,11 +303,10 @@ const styles = {
       color: "blue",
       position: "absolute",
       top: ["20%", null, null, null, "25%"],
-      // left: "10%",
+
       width: ["80%", null, null, null, "100%"],
       color: "#edab12",
-      // p: 1,
-      // mb: [50, null, null, null],
+
       ml: [10, null, null, null, 50],
       mt: 10,
       zIndex: 1,
@@ -330,7 +319,7 @@ const styles = {
 
     p: {
       fontSize: ["18px", null, null, "20px", "20px", "25px", "30px"],
-      // fontSize: "18px",
+
       lineHeight: 1.25,
       color: "#02073E",
       fontWeight: 500,
@@ -348,7 +337,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
-    // border: "1px solid black",
+
     width: "100%",
     my: ["6px", null, null, null, 10],
     p: {
@@ -358,13 +347,12 @@ const styles = {
   listContainer: {
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "flex-start",
+
     alignItems: "center",
     flex: [null, null, null, 1],
   },
   imageContainer: {
     flex: [null, null, null, 1],
-    // border: "1px solid black",
   },
   checkMark: {
     width: 25,
@@ -386,7 +374,7 @@ const styles = {
     flexDirection: ["column", null, null, null, "row"],
     justifyContent: "center",
     alignItems: "center",
-    // border: "1px solid black",
+
     height: "100%",
     pt: 80,
   },

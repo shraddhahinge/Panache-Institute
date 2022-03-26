@@ -1,17 +1,11 @@
 import React from "react";
 import { Box, Text, Heading, Image } from "theme-ui";
-import { Link } from "components/link";
 
 const FeatureCard = ({ image, text, title, path }) => {
   return (
     <Box sx={styles.featureCard}>
       <Box sx={styles.image}>
-        <Image
-          src={image}
-          alt={title}
-          className="img"
-          //   sx={{ width: width || 300, height: height || 300 }}
-        />
+        <Image src={image} alt={title} className="img" />
       </Box>
       <Box sx={styles.content}>
         <Heading as="h3">{title}</Heading>
@@ -66,13 +60,6 @@ const styles = {
         fontWeight: 600,
       },
     },
-    // p: {
-    //   fontSize: "16px",
-    //   lineHeight: 1.2,
-    //   color: "#343D48",
-    //   // mb: "20px",
-    //   width: "80%",
-    // },
   },
   button: {
     textAlign: "center",

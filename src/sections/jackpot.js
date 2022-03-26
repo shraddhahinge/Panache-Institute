@@ -1,23 +1,9 @@
 import React from "react";
 import { Box, Container, Flex, Image, Text, Heading } from "theme-ui";
-import JackpotCard from "components/cards/jackpot-card";
-import jackpotImage from "assets/teaching.jpeg";
-import jackpotImage1 from "assets/jackpot-1-1.png";
-import jackpotImage2 from "assets/jackpot-1-2.png";
-import BlockTitle from "components/block-title";
 
-const JACKPOT_DATA = [
-  {
-    image: jackpotImage1,
-    text: "Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests.",
-    heading: "Lessons with certified teachers who are native English speakers.",
-  },
-  {
-    image: jackpotImage2,
-    text: "Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests.",
-    heading: "Engaging program for kids",
-  },
-];
+import jackpotImage from "assets/teaching.jpeg";
+
+import BlockTitle from "components/block-title";
 
 const Jackpot = () => {
   return (
@@ -33,7 +19,6 @@ const Jackpot = () => {
           </Box>
           <Box sx={styles.content}>
             <Box sx={styles.heading}>
-              {/* <Heading as="h4">About Us</Heading> */}
               <Text as="p">
                 <Text as="span">PANACHE</Text> has been founded by{" "}
                 <Text as="span">CA Neha Agarwal</Text> who has worked in{" "}
@@ -50,16 +35,6 @@ const Jackpot = () => {
                 section of learners.
               </Text>
             </Box>
-            {/* <Box sx={styles.jackpotCardBox}>
-              {JACKPOT_DATA.map(({ image, heading, text }, index) => (
-                <JackpotCard
-                  image={image}
-                  heading={heading}
-                  text={text}
-                  key={index}
-                />
-              ))}
-            </Box> */}
           </Box>
         </Flex>
       </Container>
@@ -71,24 +46,16 @@ export default Jackpot;
 
 const styles = {
   jackpot: {
-    // pt: ["100px", null, null, null, "150px", null, "150px"],
-    // mt: ["100px", null, null, null, "100px", null, "100px"],
     pt: ["2px", null, null, null, "20px", null, "20px"],
     pb: ["10px", null, null, null, "60px", null, "60px"],
     mt: [null, null, null, null, "60px", null, "60px"],
   },
   flex: {
-    // display: "flex",
     flexWrap: "wrap",
-    // alignItems: "flex-start",
   },
   image: {
     flex: ["0 0 100%", null, null, null, null, "0 0 30%"],
     img: {
-      // maxWidth: ["100%", null, null, null, null, null, "none"],
-      // width: 1300,
-      // height: 500,
-      // objectFit: "contain",
       width: "100%",
       float: "right",
     },
@@ -98,11 +65,10 @@ const styles = {
   },
   heading: {
     mb: "30px",
-    // pt: "20px",
-    // textAlign: ["center", null, null, null, null, "left"],
+
     textAlign: "justify",
     pl: ["0", null, null, "30px"],
-    // maxWidth: ["80%", null, null, "100%"],
+
     mx: ["auto", null, null, "0"],
     span: {
       display: "block",
@@ -116,12 +82,6 @@ const styles = {
       fontSize: ["23px", null, null, null, "40px"],
     },
     p: {
-      // color: "#0F2137",
-      // fontSize: ["23px", null, null, null, "20px"],
-      // fontSize: "25px",
-      // maxWidth: ["100%", null, null, null, null, "90%", "100%"],
-      // letterSpacing: "1px",
-      // lineHeight: 1.5,
       fontSize: "20px",
       color: "#343D48",
       lineHeight: 1.73,

@@ -2,85 +2,65 @@
 import { jsx, Container, Heading, Text, Box, Image } from "theme-ui";
 import Carousel from "react-multi-carousel";
 import BlockTitle from "components/block-title";
-import ButtonGroup from "components/button-group";
-import Avatar1 from "assets/testimonial-1-1.png";
-import Avatar2 from "assets/testimonial-1-2.png";
-import Avatar3 from "assets/testimonial-1-3.png";
-import Avatar4 from "assets/testimonial-1-4.png";
-import { Link } from "components/link";
+
 import { useState } from "react";
 import ReadMoreReact from "read-more-react";
-import ReactPlayer from "react-player";
-import { re } from "prettier/doc";
+
 var video1 = require("assets/video.mp4");
 var video2 = require("assets/video1.mp4");
 const data = [
   {
     id: 1,
-    // title: "Lovely Kid Feedback",
     description:
       "Thank you ma'am for developing reading skills in my child at this tender age. Now he need not cram the spelling. Now, my child is also a PHONIC MASTER.",
-    // avatar: Avatar1,
-    // image: StudentFeedback1,
-    // name: "Om",
     name: "Mother of Grade-1 student",
     review: 4,
   },
   {
     id: 2,
-    // title: "Happy Student Feedback",
+
     description:
       "Learning from you ma'am was a great experience. You taught with great patience and enthusiasm. Earlier, neither was I able to express my views nor speak fluently. But you really transformed me. You make me feel confident about myself and always encourage me to do more. Your sessions were very interactive. And the thing I like the most about the course is Group discussions. Thank you ma'am for providing great knowledge to me",
-    // avatar: Avatar2,
-    // image: StudentFeedback2,
+
     name: "Anshika",
     designation: "Grade-12 student",
     review: 5,
   },
   {
     id: 3,
-    // title: "Lovely Kid Feedback",
+
     description:
       "Neha ma'am is my favourite because she has some special qualities e.g cute, good, honest, clean heart and one important thing soft voice. She is very sweet and amazing!!! I love my Neha ma'am very much.",
-    // avatar: Avatar3,
-    // image: StudentFeedback1,
+
     name: "Arisha Rana",
     designation: "Grade-4 student",
     review: 5,
   },
   {
     id: 4,
-    // title: "Happy Student Feedback",
+
     description:
       "Thanks a lot PANACHE for your ELOQUENT readers and writers course. Now after reading the chapters, he can frame the answers on his own. He scores good marks and has plenty of time to follow his dream of being a cricketer",
-    // avatar: Avatar4,
-    // image: StudentFeedback2,
-    // name: "Lakshay Kapil",
+
     name: "Mother of Grade-7 student",
     review: 4,
   },
   {
     id: 4,
-    // title: "Happy Student Feedback",
-    // description:
-    //   "Thanks a lot PANACHE for your ELOQUENT readers and writers course. Now after reading the chapters, he can frame the answers on his own. He scores good marks and has plenty of time to follow his dream of being a cricketer",
+
     video: video1,
-    // avatar: Avatar4,
-    // image: StudentFeedback2,
-    // name: "Lakshay Kapil",
+
     name: "Father of Tisha Khanna",
+    designation: "Grade-6 student",
     review: 4,
   },
   {
     id: 4,
-    // title: "Happy Student Feedback",
-    // description:
-    //   "Thanks a lot PANACHE for your ELOQUENT readers and writers course. Now after reading the chapters, he can frame the answers on his own. He scores good marks and has plenty of time to follow his dream of being a cricketer",
+
     video: video2,
-    // avatar: Avatar4,
-    // image: StudentFeedback2,
+
     name: "Moksh Ahuja",
-    // designation: "Mother of Grade-7 student",
+    designation: "Grade-8 student",
     review: 4,
   },
 ];
@@ -89,22 +69,22 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1619 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3,
   },
   laptop: {
     breakpoint: { max: 1619, min: 1024 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
     items: 2,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 639, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
 };
 
@@ -158,7 +138,7 @@ export default function TestimonialCard() {
           slidesToSlide={1}
           swipeable
         >
-          {data.map((item) => (
+          {data?.map((item) => (
             <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
               {item?.video ? (
                 <video
@@ -181,11 +161,6 @@ export default function TestimonialCard() {
               )}
 
               <div className="card-footer">
-                {/* {item?.avatar && (
-                  <div className="image">
-                    <Image src={item.avatar} alt="Client Image" />
-                  </div>
-                )} */}
                 <div className="reviewer-info">
                   <Heading as="h4" sx={styles.heading}>
                     {item.name}
@@ -223,7 +198,7 @@ const styles = {
         null,
         "calc(50% + 865px)",
       ],
-      // mr: ["auto", null, null, null, null, null, null, "-220px"],
+
       mr: "auto",
       ml: "auto",
       li: {
@@ -241,29 +216,17 @@ const styles = {
       },
     },
   },
-  // feedbackImg: {
-  //   width: 200,
-  //   height: 200,
-  //   objectFit: "contain",
-  // },
+
   reviewCard: {
     boxShadow: "0px 0px 1px rgba(38, 78, 118, 0.35)",
     transition: "all 0.3s",
-    // height: "350px",
-    // width: "393px",
+
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
     borderRadius: "6px",
-    // p: [
-    //   "30px 20px 35px",
-    //   "30px 25px 35px",
-    //   "30px 20px 35px",
-    //   "35px 30px 40px 40px",
-    //   "30px 30px 35px",
-    //   "35px 30px 40px 40px",
-    // ],
+
     px: "30px",
     pt: "20px",
     pb: "10px",
@@ -314,26 +277,20 @@ const styles = {
     color: "#343D48",
     lineHeight: 1.73,
     fontWeight: "normal",
-    // color: "text",
-    // lineHeight: [1.85, null, 2],
   },
   heading: {
-    // fontSize: [1, null, null, 2],
     fontSize: "22px",
     color: "#343D48",
     lineHeight: 1.73,
     fontWeight: 700,
     mb: "3px",
-    // color: "text",
-    // lineHeight: 1.3,
   },
   designation: {
     color: "#25A0FF",
     fontWeight: "500",
-    // fontSize: 1,
-    // lineHeight: 1.4,
+
     fontSize: "18px",
-    // color: "#343D48",
+
     lineHeight: 1.73,
   },
 };

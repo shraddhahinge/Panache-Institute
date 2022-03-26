@@ -98,7 +98,7 @@ const Events = () => {
         swipeable
       >
         {BANNER_DATA.map((data, idx) => (
-          <Box as="section" id="banner" sx={styles.banner}>
+          <Box as="section" id="banner" key={data?.id} sx={styles.banner}>
             <Container sx={styles.container}>
               {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */}
               <Box sx={styles.listContainer}>

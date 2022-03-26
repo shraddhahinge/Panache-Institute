@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Container, Flex, Text, Heading, Image } from "theme-ui";
-import { Link } from "components/link";
 
 import missionImage from "assets/mission_n_vision.png";
 import JackpotCard from "components/cards/jackpot-card";
@@ -36,8 +35,6 @@ const CallToAction = () => {
       <Container>
         <Flex sx={styles.flex}>
           <Box sx={styles.content}>
-            {/* <Text as="span">Our good mission</Text> */}
-            {/* <Heading as="h4">“Mission and Vision“</Heading> */}
             <Box sx={styles.jackpotCardBox}>
               {JACKPOT_DATA.map(({ image, heading, text }, index) => (
                 <JackpotCard
@@ -48,19 +45,6 @@ const CallToAction = () => {
                 />
               ))}
             </Box>
-            {/* <Text as="p">
-              Get your tests delivered at let home collect sample from the
-              victory of the managements that supplies best design system
-              guidelines ever. Get your tests delivered at let home collect
-              sample.
-            </Text> */}
-            {/* <Link
-              path="https://forms.gle/2sG6pC6zy9X61Dat7/"
-              target="_blank"
-              sx={styles.button}
-            >
-              Enroll Now
-            </Link> */}
           </Box>
           <Box sx={styles.images}>
             <Image
@@ -136,10 +120,5 @@ const styles = {
   },
   images: {
     flex: ["0 0 100%", null, null, null, "0 0 50%"],
-  },
-
-  jackpotCardBox: {
-    // display: ["grid", null, null, null, null, "block"],
-    // gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
   },
 };

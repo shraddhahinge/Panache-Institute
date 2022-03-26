@@ -11,12 +11,7 @@ export default function Logo({ image, className, mobile }) {
         ...styles.link,
       }}
     >
-      <Image
-        src={image}
-        alt="startup landing logo"
-        className={className}
-        sx={styles.image}
-      />
+      <Image src={image} alt="logo" className={className} sx={styles.image} />
     </Link>
   );
 }
