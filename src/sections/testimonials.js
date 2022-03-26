@@ -117,8 +117,8 @@ export default function TestimonialCard() {
         <Carousel
           additionalTransfrom={0}
           arrows={false}
-          // autoplay
-          // autoPlaySpeed={3000}
+          autoplay={false}
+          autoPlaySpeed={3000}
           centerMode={false}
           className=""
           containerClass="carousel-container"
@@ -135,7 +135,7 @@ export default function TestimonialCard() {
           responsive={responsive}
           showDots={true}
           sliderClass=""
-          slidesToSlide={1}
+          // slidesToSlide={1}
           swipeable
         >
           {data?.map((item) => (
