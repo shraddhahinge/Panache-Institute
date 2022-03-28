@@ -126,9 +126,9 @@ export default Events;
 
 const styles = {
   carouselWrapper: {
-    pt: ["2px", null, null, null, "20px", null, "20px"],
-    pb: ["10px", null, null, null, "60px", null, "60px"],
-    mt: [null, null, null, null, "80px", null, "80px"],
+    pt: ["2px", null, "60px", null, "20px", null, "20px"],
+    pb: ["10px", null, "60px", null, "60px", null, "60px"],
+    mt: [null, null, "80px", null, "80px", null, "80px"],
     ".carousel-container": {
       width: "100%",
       pb: 50,
@@ -138,7 +138,7 @@ const styles = {
         transition: "all 0.25s",
       },
       ".react-multi-carousel-item--active:nth-of-type(4n)": {
-        opacity: "0.5",
+        // opacity: "0.5",
         "@media screen and (max-width: 1620px)": {
           opacity: 1,
         },
@@ -166,7 +166,7 @@ const styles = {
     },
     p: {
       // fontSize: ["30px", null, null, "30px", "30px", "50px", "50px"],
-      fontSize: ["30px", null, null, "40px"],
+      fontSize: ["30px", null, "40px", null, "40px"],
       // fontSize: "18px",
       lineHeight: 1.25,
       textAlign: ["center", null, null, null, null],
@@ -175,7 +175,7 @@ const styles = {
       width: ["100%", null, null, null, "80%"],
       fontFamily: "Shadows Into Light, cursive",
       span: {
-        fontSize: ["40px", null, null, "30px", "30px", "50px", "50px"],
+        fontSize: ["40px", null, "50px", "50px", "30px", "50px", "50px"],
         fontWeight: 600,
       },
     },
@@ -246,8 +246,8 @@ const styles = {
     // mx: "auto",
     // mt: [40, null, null, 0],
     borderRadius: "10px",
-    width: [750, null, null, null, 1400],
-    height: [300, null, null, null, 500],
+    width: [750, null, 1400, null, 1400],
+    height: [300, null, 500, null, 500],
     // width: "100%",
     // height: "100%",
     objectFit: "contain",

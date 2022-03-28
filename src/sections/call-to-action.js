@@ -63,8 +63,8 @@ export default CallToAction;
 
 const styles = {
   callToAction: {
-    mt: ["10px", null, null, null, "80px", null, "80px"],
-    py: ["10px", null, null, null, "20px", null, "20px"],
+    mt: ["10px", null, "80px", null, "80px", null, "80px"],
+    py: ["10px", null, "20px", null, "20px", null, "20px"],
     backgroundColor: "#f3e7e4",
   },
   flex: {
@@ -97,7 +97,7 @@ const styles = {
     },
     p: {
       color: "#02073E",
-      // fontSize: ["16px", null, null, "18px"],
+      // fontSize: [null, null, "20px", null],
       lineHeight: ["2", null, null, 2.33],
       mb: "30px",
     },
@@ -120,5 +120,6 @@ const styles = {
   },
   images: {
     flex: ["0 0 100%", null, null, null, "0 0 50%"],
+    textAlign: "center",
   },
 };

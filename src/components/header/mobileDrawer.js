@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Box } from "theme-ui";
+import { Button, Box, Text } from "theme-ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import Drawer from "components/drawer";
 import { DrawerContext } from "contexts/drawer/drawer.context";
@@ -48,6 +48,8 @@ const MobileDrawer = () => {
                 duration={500}
                 key={i}
               >
+                {/* <Text as="p">{label}</Text>
+                 */}
                 {label}
               </ScrollLink>
             ))}
@@ -146,7 +148,7 @@ const styles = {
     marginTop: "30px",
 
     a: {
-      fontSize: "16px",
+      fontSize: ["16px", null, "30px", null, null],
       fontWeight: "400",
       color: "black",
       py: "5px",

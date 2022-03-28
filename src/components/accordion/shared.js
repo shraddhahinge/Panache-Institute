@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 
 export const AccordionButton = ({ children, ...rest }) => (
   <div
-    css={{
+    sx={{
       display: "flex",
       alignItems: "center",
       letterSpacing: "-0.2px",
       cursor: "pointer",
-      fontSize: [22, null, null, null, "25px"],
+      // fontSize: "25px",
+      fontSize: ["16px", null, "35px", null, "25px"],
       lineHeight: 1.5,
       fontWeight: "500",
       border: "none",
@@ -24,7 +25,8 @@ export const AccordionButton = ({ children, ...rest }) => (
         paddingRight: "30px",
         paddingTop: "20px",
         paddingBottom: "20px",
-        fontSize: "25px",
+        // fontSize: "30px",
+        // fontSize: ["25px", null, "35px", null, "25px"],
       },
 
       ":focus": {
@@ -75,15 +77,16 @@ export function AccordionContents({ isOpen, ...props }) {
       initial="closed"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
-      css={{
+      sx={{
         overflowY: "hidden",
-        fontSize: [15, null, null, null, 20],
+        fontSize: [18, null, 25, null, 20],
         padding: "0 15px",
         paddingRight: [null, null, null, "40px"],
         lineHeight: "30px",
         color: "#343D48",
         "@media(min-width: 768px)": {
           padding: "0 30px",
+          // fontSize: 28,
         },
       }}
       {...props}

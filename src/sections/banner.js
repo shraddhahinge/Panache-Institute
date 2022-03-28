@@ -272,7 +272,7 @@ const styles = {
     },
     ".bannerIcon": {
       position: "absolute",
-      display: ["none", null, null, null, "block"],
+      display: ["none", null, "block", null, "block"],
     },
     h5: {
       fontSize: ["22px", null, null, "40px"],
@@ -290,25 +290,26 @@ const styles = {
     height: "100vh",
     pt: ["180px", null, null, null, "100px"],
     pb: 10,
-    px: 20,
+    // px: [null, null, null, null, 20],
     position: "relative",
     ".bannerIcon": {
       position: "absolute",
       display: ["none", null, null, null, "block"],
     },
     h4: {
-      fontSize: ["35px", null, null, "60px"],
+      fontSize: ["30px", null, "60px", null, "60px"],
       lineHeight: [1.2, null, null, null],
-      textAlign: ["center", null, null, null, "left"],
+      textAlign: ["center", null, "center", null, "left"],
       color: "blue",
       position: "absolute",
       top: ["20%", null, null, null, "25%"],
-
-      width: ["80%", null, null, null, "100%"],
+      // border: "1px solid red",
+      width: ["100%", null, "100%", null, "100%"],
       color: "#edab12",
-
-      ml: [10, null, null, null, 50],
+      px: [10, null, null, null, 20],
+      // ml: [10, null, 0, null, 50],
       mt: 10,
+      // mx: "auto",
       zIndex: 1,
       fontWeight: "bold",
       fontFamily: "Hurricane, cursive",
@@ -318,7 +319,7 @@ const styles = {
     },
 
     p: {
-      fontSize: ["18px", null, null, "20px", "20px", "25px", "30px"],
+      fontSize: ["18px", "18px", "20px", "40px", "20px", "25px", "30px"],
 
       lineHeight: 1.25,
       color: "#02073E",
@@ -339,7 +340,7 @@ const styles = {
     justifyContent: "flex-start",
 
     width: "100%",
-    my: ["6px", null, null, null, 10],
+    my: [1, null, 2, null, 10],
     p: {
       mx: [1, null, null, null, 10],
     },
@@ -363,8 +364,8 @@ const styles = {
   bannerImage: {
     display: "block",
     borderRadius: "10px",
-    width: [750, null, null, null, 1300],
-    height: [200, null, null, null, 450],
+    width: [750, null, 1200, null, 1300],
+    height: [200, null, 350, null, 450],
     objectFit: "contain",
     position: "relative",
   },
@@ -376,7 +377,7 @@ const styles = {
     alignItems: "center",
 
     height: "100%",
-    pt: 80,
+    pt: [10, null, 250, null, 80],
   },
   bannerIcon1: {
     top: "20%",

@@ -20,8 +20,8 @@ const styles = {
   jackpotCard: {
     // p: ["30px", null, null, null, null, "15px 10px", "10px"],
     display: "flex",
-    flexDirection: ["column", null, null, "row"],
-    textAlign: ["center", null, null, "justify"],
+    flexDirection: ["column", null, "column", null, "row"],
+    textAlign: ["center", null, "center", null, "justify"],
     transition: "all 500ms ease",
     borderRadius: "10px",
     // backgroundColor: "#ffffff",
@@ -37,23 +37,23 @@ const styles = {
   },
 
   icon: {
-    height: 60,
-    width: 60,
+    height: [60, null, 80, null, 60],
+    width: [60, null, 80, null, 60],
   },
 
   content: {
     h3: {
       color: "#0F2137",
-      fontSize: "25px",
+      fontSize: ["25px", null, "35px", null, "25px"],
       lineHeight: 1,
       fontWeight: 700,
       mb: "10px",
     },
     p: {
-      fontSize: "20px",
+      fontSize: ["20px", null, "30px", null, "20px"],
       color: "#343D48",
       lineHeight: 1.73,
-      width: ["100%", null, null, "80%"],
+      width: ["100%", null, "100%", null, "80%"],
     },
   },
 };

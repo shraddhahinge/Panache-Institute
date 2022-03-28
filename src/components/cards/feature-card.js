@@ -19,8 +19,8 @@ export default FeatureCard;
 
 const styles = {
   featureCard: {
-    width: [null, null, null, "550px"],
-    height: [null, null, null, "300px"],
+    width: [null, null, "650px", null, "550px"],
+    height: [null, null, "600px", null, "300px"],
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -31,8 +31,8 @@ const styles = {
     flexShrink: 0,
 
     img: {
-      width: 280,
-      height: 280,
+      width: [280, null, 400, null, null, 280],
+      height: [280, null, 400, null, null, 280],
       objectFit: "contain",
     },
   },
@@ -42,12 +42,12 @@ const styles = {
     h3: {
       color: "#0F2137",
       fontWeight: 700,
-      fontSize: "25px",
+      fontSize: ["25px", null, "35px", null, null, "25px"],
       lineHeight: 1,
       textAlign: "center",
     },
     p: {
-      fontSize: "20px",
+      fontSize: ["20px", null, "30px", null, null, "20px"],
       // fontSize: "18px",
       lineHeight: 1.25,
       color: "#02073E",

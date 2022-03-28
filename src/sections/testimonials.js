@@ -78,7 +78,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1,
   },
   mobile: {
@@ -104,88 +104,89 @@ export default function TestimonialCard() {
     );
   };
   return (
-    <section
+    <Box
       as="section"
       id="testimonials"
-      sx={{ variant: "section.testimonial" }}
+      // sx={{ variant: "section.testimonial" }}
+      sx={styles.carouselWrapper}
     >
       <BlockTitle
         title="What people say about us"
         // text="Student testimonial"
       />
-      <Box sx={styles.carouselWrapper}>
-        <Carousel
-          additionalTransfrom={0}
-          arrows={false}
-          autoplay={false}
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className=""
-          containerClass="carousel-container"
-          // customButtonGroup={<ButtonGroup />}
-          dotListClass=""
-          draggable
-          focusOnSelect={true}
-          infinite={true}
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={responsive}
-          showDots={true}
-          sliderClass=""
-          // slidesToSlide={1}
-          swipeable
-        >
-          {data?.map((item) => (
-            <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
-              {item?.video ? (
-                <video
-                  height="300px"
-                  width="300px"
-                  sx={{ mx: "auto" }}
-                  controls
-                >
-                  <source src={item.video} type="video/mp4" />
-                  Your browser does not support HTML video.
-                </video>
-              ) : (
-                <Text sx={styles.description}>
-                  {item?.description?.length > 100 ? (
-                    readMorePara(item.description)
-                  ) : (
-                    <Text>{item.description}</Text>
-                  )}
-                </Text>
-              )}
+      {/* <Box sx={styles.carouselWrapper}> */}
+      <Carousel
+        additionalTransfrom={0}
+        arrows={false}
+        autoplay={false}
+        autoPlaySpeed={3000}
+        centerMode={false}
+        className=""
+        containerClass="carousel-container"
+        // customButtonGroup={<ButtonGroup />}
+        dotListClass=""
+        draggable
+        focusOnSelect={true}
+        infinite={true}
+        itemClass=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={responsive}
+        showDots={true}
+        sliderClass=""
+        slidesToSlide={1}
+        swipeable
+      >
+        {data?.map((item) => (
+          <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
+            {item?.video ? (
+              <video height="300px" width="300px" sx={{ mx: "auto" }} controls>
+                <source src={item.video} type="video/mp4" />
+                Your browser does not support HTML video.
+              </video>
+            ) : (
+              <Text sx={styles.description}>
+                {item?.description?.length > 100 ? (
+                  readMorePara(item.description)
+                ) : (
+                  <Text>{item.description}</Text>
+                )}
+              </Text>
+            )}
 
-              <div className="card-footer">
-                <div className="reviewer-info">
-                  <Heading as="h4" sx={styles.heading}>
-                    {item.name}
-                  </Heading>
-                  {item?.designation && (
-                    <Text sx={styles.designation}>{item.designation}</Text>
-                  )}
-                </div>
+            <div className="card-footer">
+              <div className="reviewer-info">
+                <Heading as="h4" sx={styles.heading}>
+                  {item.name}
+                </Heading>
+                {item?.designation && (
+                  <Text sx={styles.designation}>{item.designation}</Text>
+                )}
               </div>
-            </Box>
-          ))}
-        </Carousel>
-      </Box>
-    </section>
+            </div>
+          </Box>
+        ))}
+      </Carousel>
+      {/* </Box> */}
+    </Box>
   );
 }
 
 const styles = {
   carouselWrapper: {
     display: "flex",
-    justifyContent: "flex-end",
+    justifyContent: "center",
     flexDirection: "column",
-    alignItems: "flex-end",
-    mt: "-35px",
-    px: "15px",
+    alignItems: "center",
+    overflow: "hidden",
+    backgroundColor: "#fef0ef",
+    // mt: "-35px",
+    // px: "15px",
+    pt: ["2px", null, "60px", null, "20px", null, "20px"],
+    pb: ["10px", null, "60px", null, "60px", null, "60px"],
+    mt: [null, null, "80px", null, "80px", null, "80px"],
     ".carousel-container": {
       width: "100%",
       maxWidth: [
@@ -201,9 +202,7 @@ const styles = {
 
       mr: "auto",
       ml: "auto",
-      li: {
-        // width: "393px",
-      },
+
       ".react-multi-carousel-item": {
         transition: "all 0.25s",
         // height: "300px",
@@ -273,13 +272,13 @@ const styles = {
   },
   description: {
     // fontSize: [1, null, null, 2],
-    fontSize: "20px",
+    fontSize: ["20px", null, "30px", null, "20px"],
     color: "#343D48",
     lineHeight: 1.73,
     fontWeight: "normal",
   },
   heading: {
-    fontSize: "22px",
+    fontSize: ["22px", null, "30px", null, "22px"],
     color: "#343D48",
     lineHeight: 1.73,
     fontWeight: 700,
@@ -289,7 +288,7 @@ const styles = {
     color: "#25A0FF",
     fontWeight: "500",
 
-    fontSize: "18px",
+    fontSize: ["18px", null, "25px", null, "18px"],
 
     lineHeight: 1.73,
   },

@@ -59,9 +59,9 @@ export default Features;
 const styles = {
   features: {
     // py: ["60px", null, null, null, "110px", null, "140px"],
-    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pt: ["2px", null, "60px", , null, "20px", null, "20px"],
     pb: ["10px", null, null, null, "60px", null, "60px"],
-    mt: [null, null, null, null, "80px", null, "80px"],
+    mt: [null, null, "80px", null, "80px", null, "80px"],
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -69,7 +69,7 @@ const styles = {
   },
   grid: {
     display: "flex",
-    flexDirection: ["column", null, null, "row"],
+    flexDirection: ["column", null, "column", null, "row"],
     alignItems: "center",
     justifyContent: "space-between",
   },

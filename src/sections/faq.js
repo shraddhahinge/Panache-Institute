@@ -232,9 +232,9 @@ export default FAQ;
 const styles = {
   faq: {
     // mt: 50,
-    pt: ["2px", null, null, null, "20px", null, "20px"],
+    pt: ["2px", null, "60px", null, "20px", null, "20px"],
     // pb: ["10px", null, null, null, "60px", null, "60px"],
-    mt: [null, null, null, null, "80px", null, "80px"],
+    mt: [null, null, "80px", null, "80px", null, "80px"],
   },
   flex: {
     flexWrap: "wrap",
@@ -246,10 +246,10 @@ const styles = {
     maxWidth: ["100%", null, null, "450px", "100%"],
     mx: ["auto", null, null, null, "0"],
     mb: ["0px", null, null, null, "0"],
-    textAlign: ["center", null, null, null, null, "left"],
+    textAlign: ["center", null, "center", null, null, "left"],
     mt: ["40px", null, null, null, null, "0"],
     h3: {
-      fontSize: ["23px", null, null, null, "24px"],
+      fontSize: ["20px", null, "30px", null, "24px"],
       lineHeight: [1.5, null, null, null, 1.67],
       color: "black",
       fontWeight: 700,
@@ -258,7 +258,7 @@ const styles = {
       pr: ["0", null, null, null, null, "30px"],
     },
     p: {
-      fontSize: "16px",
+      fontSize: ["16px", null, "25px", null, "20px"],
       lineHeight: 1.87,
       color: "#343D48",
       opacity: 0.7,
@@ -272,7 +272,7 @@ const styles = {
     backgroundColor: "#02073E",
     color: "#fff",
     borderRadius: "5px",
-    fontSize: "16px",
+    fontSize: ["16px", null, "25px", null, "20px"],
     fontWeight: 700,
     p: "6.5px 19px",
     letterSpacing: "-0.16px",

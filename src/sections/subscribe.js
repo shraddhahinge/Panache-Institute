@@ -83,8 +83,8 @@ const Subscribe = () => {
           <Image
             src={logoImage}
             sx={{
-              width: [300, null, null, null, 400],
-              height: [200, null, null, null, 350],
+              width: [300, null, 400, null, 400],
+              height: [200, null, 350, null, 350],
               objectFit: "contain",
               mx: "auto",
             }}
@@ -109,7 +109,7 @@ const styles = {
     justifyContent: "space-between",
     h3: {
       textAlign: "center",
-      fontSize: ["23px", null, null, null, null, "80px", "80px"],
+      fontSize: ["23px", null, "50px", null, null, "80px", "80px"],
       lineHeight: [1.5, null, null, "1"],
       color: "#fff",
       letterSpacing: ["-0.5px"],
@@ -118,7 +118,7 @@ const styles = {
       mx: [null, null, null, "0"],
     },
     p: {
-      fontSize: ["20px"],
+      fontSize: ["20px", null, "30px", null, "20px"],
       color: "#fff",
       opacity: ".6",
 
@@ -133,11 +133,13 @@ const styles = {
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    flexDirection: ["column-reverse", null, null, "row"],
+    flexDirection: ["column-reverse", null, "column-reverse", null, "row"],
     // padding: 100,
     // border: "1px solid white",
     ".left": {
       flex: 1,
+      justifyContent: "center",
+      width: ["100%", null, "100%", null, null],
       // height: 800,
     },
   },
@@ -153,9 +155,9 @@ const styles = {
   socialContainer: {
     display: [null, null, null, "flex"],
     alignItems: "center",
-    justifyContent: "space-between",
-    width: [null, null, null, 500],
+    justifyContent: ["space-between", null, "center", null, "space-between"],
+    width: [null, null, 600, null, 500],
     // textAlign: "left",
-    mt: [20, null, null, null, 80],
+    mt: [20, null, 60, null, 80],
   },
 };

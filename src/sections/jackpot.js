@@ -46,9 +46,9 @@ export default Jackpot;
 
 const styles = {
   jackpot: {
-    pt: ["2px", null, null, null, "20px", null, "20px"],
-    pb: ["10px", null, null, null, "60px", null, "60px"],
-    mt: [null, null, null, null, "60px", null, "60px"],
+    pt: ["2px", null, "60px", null, "20px", null, "20px"],
+    pb: ["10px", null, "60px", null, "60px", null, "60px"],
+    mt: [null, null, "60px", null, "60px", null, "60px"],
   },
   flex: {
     flexWrap: "wrap",
@@ -82,7 +82,7 @@ const styles = {
       fontSize: ["23px", null, null, null, "40px"],
     },
     p: {
-      fontSize: "20px",
+      fontSize: ["20px", null, "30px", null, null, "20px"],
       color: "#343D48",
       lineHeight: 1.73,
     },
