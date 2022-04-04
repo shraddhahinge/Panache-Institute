@@ -126,7 +126,7 @@ export default function TestimonialCard() {
         customButtonGroup={<ButtonGroup />}
         dotListClass=""
         draggable
-        focusOnSelect={true}
+        focusOnSelect={false}
         infinite={false}
         itemClass=""
         keyBoardControl

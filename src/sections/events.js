@@ -84,7 +84,7 @@ const Events = () => {
         // customButtonGroup={<ButtonGroup />}
         dotListClass=""
         draggable
-        focusOnSelect={true}
+        focusOnSelect={false}
         infinite={false}
         itemClass=""
         keyBoardControl
