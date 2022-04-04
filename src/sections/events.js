@@ -134,9 +134,9 @@ const styles = {
       pb: 50,
 
       mx: "auto",
-      ".react-multi-carousel-item": {
-        transition: "all 0.25s",
-      },
+      // ".react-multi-carousel-item": {
+      //   transition: "all 0.25s",
+      // },
       ".react-multi-carousel-item--active:nth-of-type(4n)": {
         // opacity: "0.5",
         "@media screen and (max-width: 1620px)": {

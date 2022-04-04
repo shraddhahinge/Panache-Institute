@@ -203,10 +203,10 @@ const styles = {
       mr: "auto",
       ml: "auto",
 
-      ".react-multi-carousel-item": {
-        transition: "all 0.25s",
-        // height: "300px",
-      },
+      // ".react-multi-carousel-item": {
+      //   transition: "all 0.25s",
+      //   // height: "300px",
+      // },
       ".react-multi-carousel-item--active:nth-of-type(4n)": {
         // opacity: "0.5",
         "@media screen and (max-width: 1620px)": {
