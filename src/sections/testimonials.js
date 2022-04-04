@@ -5,7 +5,7 @@ import BlockTitle from "components/block-title";
 
 import { useState } from "react";
 import ReadMoreReact from "read-more-react";
-
+import ButtonGroup from "./../components/button-group";
 var video1 = require("assets/video.mp4");
 var video2 = require("assets/video1.mp4");
 const data = [
@@ -119,11 +119,11 @@ export default function TestimonialCard() {
         additionalTransfrom={0}
         arrows={false}
         autoplay={false}
-        autoPlaySpeed={3000}
+        // autoPlaySpeed={3000}
         centerMode={false}
         className=""
         containerClass="carousel-container"
-        // customButtonGroup={<ButtonGroup />}
+        customButtonGroup={<ButtonGroup />}
         dotListClass=""
         draggable
         focusOnSelect={true}
@@ -131,10 +131,10 @@ export default function TestimonialCard() {
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
+        renderButtonGroupOutside={true}
         renderDotsOutside={false}
         responsive={responsive}
-        showDots={true}
+        showDots={false}
         sliderClass=""
         slidesToSlide={1}
         swipeable

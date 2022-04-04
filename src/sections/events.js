@@ -77,7 +77,7 @@ const Events = () => {
         additionalTransfrom={0}
         arrows={false}
         // autoPlay
-        autoPlaySpeed={3000}
+        // autoPlaySpeed={3000}
         centerMode={false}
         className=""
         containerClass="carousel-container"
