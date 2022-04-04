@@ -118,7 +118,7 @@ export default function TestimonialCard() {
       <Carousel
         additionalTransfrom={0}
         arrows={false}
-        autoplay={false}
+        // autoplay={false}
         // autoPlaySpeed={3000}
         centerMode={false}
         className=""
@@ -127,7 +127,7 @@ export default function TestimonialCard() {
         dotListClass=""
         draggable
         focusOnSelect={true}
-        infinite={true}
+        infinite={false}
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}

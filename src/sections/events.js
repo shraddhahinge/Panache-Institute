@@ -85,7 +85,7 @@ const Events = () => {
         dotListClass=""
         draggable
         focusOnSelect={true}
-        infinite={true}
+        infinite={false}
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
