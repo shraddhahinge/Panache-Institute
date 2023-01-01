@@ -94,7 +94,7 @@ const Events = () => {
         responsive={responsive}
         showDots
         sliderClass=""
-        slidesToSlide={1}
+        // slidesToSlide={1}
         swipeable
       >
         {BANNER_DATA.map((data, idx) => (

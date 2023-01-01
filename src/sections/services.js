@@ -43,26 +43,26 @@ We also provide with the <span>comprehensive assessments</span> of the concepts 
     period: 4,
     price: 3000,
   },
-  {
-    image: course3,
-    text: `The benefits of Vedic maths are numerous. To name a few:
-    <ul>
-<li>Fun-Filled way to do Math with high and accuracy.</li>
-<li>Much Improved Academic <span>Performance.</span></li>
-<li>Instant Results.</li>
-<li><span>Sharpens your mind, increases mental agility and intelligence.</span></li>
-<li>Develops both sides of your brain.</li> 
-<li>Easy to master and apply.</li>
-<li>Can be used in exams like CAT, CET, SAT, Banking Exams, FCAT,  etc.</li>
-</ul>
-`,
-    heading: "The Magic of Vedic Maths",
-    tagline: "Kids aged 11 to 16 yrs.",
-    path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
-    sessions: 80,
-    period: 6,
-    price: 2000,
-  },
+  //   {
+  //     image: course3,
+  //     text: `The benefits of Vedic maths are numerous. To name a few:
+  //     <ul>
+  // <li>Fun-Filled way to do Math with high and accuracy.</li>
+  // <li>Much Improved Academic <span>Performance.</span></li>
+  // <li>Instant Results.</li>
+  // <li><span>Sharpens your mind, increases mental agility and intelligence.</span></li>
+  // <li>Develops both sides of your brain.</li>
+  // <li>Easy to master and apply.</li>
+  // <li>Can be used in exams like CAT, CET, SAT, Banking Exams, FCAT,  etc.</li>
+  // </ul>
+  // `,
+  //     heading: "The Magic of Vedic Maths",
+  //     tagline: "Kids aged 11 to 16 yrs.",
+  //     path: "https://docs.google.com/forms/d/e/1FAIpQLSel-Iy2KRI_kO-H5d7kPswTXaHMVwY4Ej2r_s5Dfhu5FWkPbQ/viewform?usp=sf_link",
+  //     sessions: 80,
+  //     period: 6,
+  //     price: 2000,
+  //   },
   {
     image: course4,
     text: `More important than what you say is, <span>how you say</span> it. In this course we pursue a holistic approach to <span>vocal training</span> by incorporating exercises of voice modulation and intonation. Classes are real fun when students portray different <span>characters</span> of legendary  Shakespeare’s <span>plays</span> and other similar genre.
